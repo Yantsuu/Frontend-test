@@ -7,23 +7,97 @@
   </head>
   <body>
     <header>
-      <nav>
-        <img src="/img/logo.svg" alt="Логотип" />
-        <ul>
-          <li><a href="#">Головна</a></li>
-          <li><a href="#">Перевізникам</a></li>
-          <li><a href="#">Про нас</a></li>
-          <li><a href="#">Профіль перевізника</a></li>
-        </ul>
-        <button type="button">Створити профіль</button>
-        <button type="button">Увійти</button>
-      </nav>
-      <div></div>
+      <div class="container">
+        <nav>
+          <img src="./img/logo.svg" alt="Логотип" />
+          <ul>
+            <li><a href="#">Головна</a></li>
+            <li><a href="#">Перевізникам</a></li>
+            <li><a href="#">Про нас</a></li>
+            <li><a href="#">Профіль перевізника</a></li>
+          </ul>
+          <button type="button">Створити профіль</button>
+          <button type="button">Увійти</button>
+        </nav>
+        <div class="profile-header">
+          <p class="breadcrumbs">Головна / Профіль перевізника / Stripe</p>
+          <div class="profile-info">
+            <img
+              src="./img/main-logo.svg"
+              alt="Головне лого"
+              class="large-logo"
+            />
+            <div class="profile-text">
+              <h1>Stripe</h1>
+              <p>43 Поїздок</p>
+              <address>
+                <ul>
+                  <li>
+                    <a href="https://stripe.com" target="_blank"
+                      ><img
+                        src="./img/site-icon.svg"
+                        alt=""
+                      />https://stripe.com</a
+                    >
+                  </li>
+                  <li>
+                    <a href="tel:+380735555555"
+                      ><img src="./img/phone-icon.svg" alt="" />+38 (073) 555 55
+                      55</a
+                    >
+                  </li>
+                </ul>
+              </address>
+            </div>
+          </div>
+          <section class="stats">
+            <div class="stat-item">
+              <img src="./img/fire.svg" alt="icon" />
+              <div class="stat-text">
+                <p class="stat-label">На ринку від:</p>
+                <p class="stat-value">Травень 31, 2011</p>
+              </div>
+            </div>
+
+            <div class="stat-item">
+              <img src="./img/people.svg" alt="icon" />
+              <div class="stat-text">
+                <p class="stat-label">Перевезених пасажирів</p>
+                <p class="stat-value">4000+</p>
+              </div>
+            </div>
+
+            <div class="stat-item">
+              <img src="./img/bus.svg" alt="icon" />
+              <div class="stat-text">
+                <p class="stat-label">Автопарк</p>
+                <p class="stat-value">8 бусів</p>
+              </div>
+            </div>
+
+            <div class="stat-item">
+              <img src="./img/global.svg" alt="icon" />
+              <div class="stat-text">
+                <p class="stat-label">Обслуговуємо</p>
+                <p class="stat-value">8 країн</p>
+              </div>
+            </div>
+
+            <div class="stat-item">
+              <img src="./img/city.svg" alt="icon" />
+              <div class="stat-text">
+                <p class="stat-label">Місто</p>
+                <p class="stat-value">Львів</p>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
     </header>
     <main>
-      <section>
-        <div>
-          <div>
+      <section class="description">
+        <div class="container">
+          <div class="description-text">
             <h2>Опис перевізника</h2>
             <p lang="en">
               Stripe is a software platform for starting and running internet
@@ -40,21 +114,80 @@
               algorithms to prevent fraud.
             </p>
           </div>
-          <div>
+          <div class="socials">
             <h2>Ми у соц. мережах</h2>
             <ul>
-              <li><a href="twitter.com" target="_blank"></a></li>
-              <li><a href="fecebook.com" target="_blank"></a></li>
+              <li>
+                <a href="https://twitter.com/stripe" target="_blank"
+                  ><img
+                    src="./img/icon-twitter.svg"
+                    alt="Іконка Твітера"
+                  />twitter.com</a
+                >
+              </li>
+              <li>
+                <a href="https://facebook.com" target="_blank"
+                  ><img
+                    src="./img/icon-facebook.svg"
+                    alt="Іконка Фейсбуку"
+                  />facebook.com</a
+                >
+              </li>
             </ul>
+            <div class="gallery-truck">
+              <img src="./img/photo-truck-one.jpg" alt="Фото грузовика" />
+              <img src="./img/photo-truck-two.jpg" alt="Фото грузовика" />
+              <img src="./img/photo-truck-three.jpg" alt="Фото грузовика" />
+            </div>
           </div>
           <div>
             <h2>Обслуговуємо країни</h2>
             <ul>
-              <li>Франція</li>
-              <li>Італія</li>
-              <li>Німеччина</li>
-              <li>Нідерланди</li>
-              <li>Іспанія</li>
+              <li class="country-item">
+                <div class="country-inner">
+                  <img
+                    src="./img/flag-of-france.svg"
+                    alt="Прапор Франції"
+                    class="country-flag"
+                  /><span>Франція</span>
+                </div>
+              </li>
+              <li class="country-item">
+                <div class="country-inner">
+                  <img
+                    src="./img/flag-of-italy.svg"
+                    alt="Прапор Італії"
+                    class="country-flag"
+                  /><span>Італія</span>
+                </div>
+              </li>
+              <li class="country-item">
+                <div class="country-inner">
+                  <img
+                    src="./img/flag-of-german.svg"
+                    alt="Прапор Німеччини"
+                    class="country-flag"
+                  /><span>Німеччина</span>
+                </div>
+              </li>
+              <li class="country-item">
+                <div class="country-inner">
+                  <img
+                    src="./img/netherlands-flag.svg"
+                    alt="Прапор Нідерландів"
+                    class="country-flag"
+                  /><span>Нідерланди</span>
+                </div>
+              </li>
+              <li class="country-item">
+                <div class="country-inner">
+                  <img
+                    src="./img/spain-flag.svg"
+                    alt="Прапор Іспанії"
+                    class="country-flag"
+                  /><span>Іспанія</span>
+                </div>
+              </li>
             </ul>
           </div>
           <div>
@@ -62,170 +195,293 @@
           </div>
         </div>
       </section>
-      <section>
-        <h2>Наші водії</h2>
-        <ul>
-          <li>
-            <article>
-              <p>Досвід роботи: 5 років</p>
-              <h4>Олександр</h4>
-            </article>
-          </li>
-          <li>
-            <article>
-              <p>Досвід роботи: 7 років</p>
-              <h4>Володимир</h4>
-            </article>
-          </li>
-          <li>
-            <article>
-              <p>Досвід роботи: 1 рік</p>
-              <h4>Ірина</h4>
-            </article>
-          </li>
-          <li>
-            <article>
-              <p>Досвід роботи: 1 рік</p>
-              <h4>Михайло</h4>
-            </article>
-          </li>
-          <li>
-            <article>
-              <p>Досвід роботи: 2 роки</p>
-              <h4>Юлія</h4>
-            </article>
-          </li>
-        </ul>
-      </section>
-      <section>
-        <h2>Сервіс</h2>
-        <p>Найкращі умови для вашого комфорту</p>
-        <ul>
-          <li>
-            <arcticle>
-              <h3>
-                <img src="/img/conditioner.svg" alt="Кондиціонер" />Кондиціонер
-              </h3>
-            </arcticle>
-          </li>
-          <li>
-            <arcticle>
-              <h3><img src="/img/wifi.svg" alt="Вайфай" />Wi-Fi</h3>
-            </arcticle>
-          </li>
-          <li>
-            <arcticle>
-              <h3><img src="/img/tv.svg" alt="TV" />TV</h3>
-            </arcticle>
-          </li>
-          <li>
-            <arcticle>
-              <h3><img src="/img/wc.svg" alt="Туалет" />Туалет</h3>
-            </arcticle>
-          </li>
-          <li>
-            <arcticle>
-              <h3>
-                <img src="/img/weekend.svg" alt="Зручні сидіння" />Зручні
-                сидіння
-              </h3>
-            </arcticle>
-          </li>
-          <li>
-            <arcticle>
-              <h3>
+      <section class="drivers">
+        <div class="container">
+          <h2>Наші водії</h2>
+          <ul class="drivers-list">
+            <li>
+              <article class="driver-card">
                 <img
-                  src="/img/transport.svg"
-                  alt="Перевозимо тварин"
-                />Перевозимо тварин
-              </h3>
-            </arcticle>
-          </li>
-        </ul>
+                  src="./img/avatar-olexansder.svg"
+                  alt="Фото Олександра"
+                  class="driver-avatar"
+                />
+                <h4>Олександр</h4>
+                <p>Досвід роботи: 5 років</p>
+                <div class="driver-socials">
+                  <img
+                    src="./img/small-instagram-icon.svg"
+                    alt="Маленька іконка instagram"
+                  />
+                  <img
+                    src="./img/small-linkedIn-icon.svg"
+                    alt="Маленька іконка linkedIn"
+                  />
+                </div>
+              </article>
+            </li>
+            <li>
+              <article class="driver-card">
+                <img
+                  src="./img/avatar-volodymir.svg"
+                  alt="Фото Володимира"
+                  class="driver-avatar"
+                />
+                <h4>Володимир</h4>
+                <p>Досвід роботи: 7 років</p>
+                <div class="driver-socials">
+                  <img
+                    src="./img/small-instagram-icon.svg"
+                    alt="Маленька іконка instagram"
+                  />
+                  <img
+                    src="./img/small-linkedIn-icon.svg"
+                    alt="Маленька іконка linkedIn"
+                  />
+                </div>
+              </article>
+            </li>
+            <li>
+              <article class="driver-card">
+                <img
+                  src="./img/avatar-irynaa.svg"
+                  alt="Фото Ірини"
+                  class="driver-avatar"
+                />
+                <h4>Ірина</h4>
+                <p>Досвід роботи: 1 рік</p>
+                <div class="driver-socials">
+                  <img
+                    src="./img/small-instagram-icon.svg"
+                    alt="Маленька іконка instagram"
+                  />
+                  <img
+                    src="./img/small-linkedIn-icon.svg"
+                    alt="Маленька іконка linkedIn"
+                  />
+                </div>
+              </article>
+            </li>
+            <li>
+              <article class="driver-card">
+                <img
+                  src="./img/avatar-mykhailo.svg"
+                  alt="Фото Михайла"
+                  class="driver-avatar"
+                />
+                <h4>Михайло</h4>
+                <p>Досвід роботи: 1 рік</p>
+                <div class="driver-socials">
+                  <img
+                    src="./img/small-instagram-icon.svg"
+                    alt="Маленька іконка instagram"
+                  />
+                  <img
+                    src="./img/small-linkedIn-icon.svg"
+                    alt="Маленька іконка linkedIn"
+                  />
+                </div>
+              </article>
+            </li>
+            <li>
+              <article class="driver-card">
+                <img
+                  src="./img/avatar-yulya.jpg"
+                  alt="Фото Юлії"
+                  class="driver-avatar"
+                />
+                <h4>Юлія</h4>
+                <p>Досвід роботи: 2 роки</p>
+                <div class="driver-socials">
+                  <img
+                    src="./img/small-instagram-icon.svg"
+                    alt="Маленька іконка instagram"
+                  />
+                  <img
+                    src="./img/small-linkedIn-icon.svg"
+                    alt="Маленька іконка linkedIn"
+                  />
+                </div>
+              </article>
+            </li>
+          </ul>
+        </div>
       </section>
-      <section>
-        <h2>Що кажуть люди?</h2>
-        <p leng="en">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat.
-        </p>
-        <button type="button">Залишити відгук</button>
-        <ul>
-          <li>
-            <article>
-              <h3>Ben Yardley</h3>
-              <p>Київ - Кишинів</p>
-              <p>1 May 2023</p>
-              <p leng="en">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                nisi ut aliquip ex ea commodo consequat.
-              </p>
-            </article>
-          </li>
-          <li>
-            <article>
-              <h3>Craig Martin</h3>
-              <p>Львів - Париж</p>
-              <p>1 May 2023</p>
-              <p leng="en">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit
-                amet, consectetur adipiscing elit, sed do eiusmod tempor.
-              </p>
-            </article>
-          </li>
-        </ul>
+      <section class="service">
+        <div class="container">
+          <h2 class="service-title">Сервіс</h2>
+          <p class="service-subtitle">Найкращі умови для вашого комфорту</p>
+          <ul class="service-list">
+            <li>
+              <article class="service-item">
+                <img src="./img/conditioner.svg" alt="Кондиціонер" />
+                <h3>Кондиціонер</h3>
+              </article>
+            </li>
+            <li>
+              <article class="service-item">
+                <img src="./img/wifi.svg" alt="Вайфай" />
+                <h3>Wi-Fi</h3>
+              </article>
+            </li>
+            <li>
+              <article class="service-item">
+                <img src="./img/tv.svg" alt="TV" />
+                <h3>TV</h3>
+              </article>
+            </li>
+            <li>
+              <article class="service-item">
+                <img src="./img/wc.svg" alt="Туалет" />
+                <h3>Туалет</h3>
+              </article>
+            </li>
+            <li>
+              <article class="service-item">
+                <img src="./img/weekend.svg" alt="Зручні сидіння" />
+                <h3>Зручні сидіння</h3>
+              </article>
+            </li>
+            <li>
+              <article class="service-item">
+                <img src="./img/transport.svg" alt="Перевозимо тварин" />
+                <h3>Перевозимо тварин</h3>
+              </article>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <section class="reviews">
+        <div class="container">
+          <div class="reviews-header">
+            <h2>Що кажуть люди?</h2>
+            <p lang="en">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+              enim ad minim veniam, quis nostrud exercitation ullamco laboris
+              nisi ut aliquip ex ea commodo consequat.
+            </p>
+            <button type="button">Залишити відгук</button>
+          </div>
+          <ul class="reviews-list">
+            <li>
+              <article class="review-card">
+                <img src="./img/photo-ben-yardley.jpg" alt="Фото Бена Ярдлі" />
+                <h3>Ben Yardley</h3>
+                <p>Київ - Кишинів</p>
+                <p>1 May 2023</p>
+                <p lang="en">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                  Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                  laboris nisi ut aliquip ex ea commodo consequat.
+                </p>
+              </article>
+            </li>
+            <li>
+              <article class="review-card">
+                <img
+                  src="./img/photo-craig-martin.jpg"
+                  alt="Фото Крейга Мартіна"
+                />
+                <h3>Craig Martin</h3>
+                <p>Львів - Париж</p>
+                <p>1 May 2023</p>
+                <p lang="en">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                  Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                  laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum
+                  dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                  tempor.
+                </p>
+              </article>
+            </li>
+          </ul>
+        </div>
       </section>
     </main>
     <footer>
-      <div>
-        <img src="/img/logo-below.svg" alt="Логотип" />
-        <p>Платформа пошуку перевізників та бронювання поїздок</p>
-        <nav>
-          <h4>Клієнтам</h4>
-          <ul>
-            <li><a href="#"></a>Головна</li>
-            <li><a href="#"></a>Про нас</li>
-            <li><a href="#"></a>Ціни</li>
-            <li><a href="#"></a>Маршрути</li>
-            <li><a href="#"></a>Політика приватності</li>
-          </ul>
-        </nav>
-        <nav>
-          <h4>Перевізникам</h4>
-          <ul>
-            <li><a href="#"></a>Help Docs</li>
-            <li><a href="#"></a>Особистий кабінет</li>
-            <li><a href="#"></a>Оновлення</li>
-            <li><a href="#"></a>Контакти</li>
-          </ul>
-        </nav>
-        <div>
+      <div class="container footer-top">
+        <div class="footer-about">
+          <img src="./img/logo-below.svg" alt="Логотип" />
+          <p>Платформа пошуку перевізників та бронювання поїздок</p>
+        </div>
+        <div class="footer-links">
+          <nav>
+            <h4>Клієнтам</h4>
+            <ul>
+              <li><a href="#">Головна</a></li>
+              <li><a href="#">Про нас</a></li>
+              <li><a href="#">Ціни</a></li>
+              <li><a href="#">Маршрути</a></li>
+              <li><a href="#">Політика приватності</a></li>
+            </ul>
+          </nav>
+        </div>
+        <div class="footer-carriers">
+          <nav>
+            <h4>Перевізникам</h4>
+            <ul>
+              <li><a href="#">Help Docs</a></li>
+              <li><a href="#">Особистий кабінет</a></li>
+              <li><a href="#">Оновлення</a></li>
+              <li><a href="#">Контакти</a></li>
+            </ul>
+          </nav>
+        </div>
+        <div class="footer-contact">
           <h4>Зворотній зв’язок</h4>
           <p>Маєш пропозиції щодо покращення сервісу - пиши нам!</p>
-          <button type="button">Надіслати</button>
+          <form>
+            <input type="email" name="email" placeholder="Email Address" />
+            <button type="submit">Надіслати</button>
+          </form>
           <address>
             <ul>
-              <li><a href="tel:+380735555555">+ 38 (073) 555 55 55</a></li>
-              <li><a href="mailto:" target="_blank">gmail@gmail.com</a></li>
+              <li>
+                <a href="tel:+380735555555"
+                  ><img src="./img/phone.svg" alt="номер телефону" />+ 38
+                  (073)555 55 55</a
+                >
+              </li>
+              <li>
+                <a href="mailto:gmail@gmail.com" target="_blank"
+                  ><img src="./img/mail.svg" alt="gmail" />gmail@gmail.com</a
+                >
+              </li>
             </ul>
           </address>
         </div>
       </div>
-      <div>
-        <nav>
+      <div class="footer-bottom">
+        <nav class="footer-socials">
           <ul>
-            <li><a href="#"></a>Facebook</li>
-            <li><a href="#"></a>Instagram</li>
-            <li><a href="#"></a>Dribbble</li>
-            <li><a href="#"></a>LinkedIn</li>
-            <li><a href="#"></a>Twitter</li>
+            <li>
+              <a href="#" target="_blank"
+                ><img src="./img/facebook.svg" alt="Facebook"
+              /></a>
+            </li>
+            <li>
+              <a href="#" target="_blank"
+                ><img src="./img/instagram.svg" alt="Instagram"
+              /></a>
+            </li>
+            <li>
+              <a href="#" target="_blank"
+                ><img src="./img/dribbble.svg" alt="Dribbble"
+              /></a>
+            </li>
+            <li>
+              <a href="#" target="_blank"
+                ><img src="./img/linkedIn.svg" alt="LinkedIn"
+              /></a>
+            </li>
+            <li>
+              <a href="#" target="_blank"
+                ><img src="./img/twitter.svg" alt="Twitter"
+              /></a>
+            </li>
           </ul>
         </nav>
         <p>2024 @ Sprinters. All rights reserved.</p>
