@@ -4,22 +4,45 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Stripe</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
   </head>
   <body>
-    <header>
+    <header id="top">
       <div class="container">
         <nav>
-          <img src="./img/logo.svg" alt="Логотип" />
+          <a href="index.html">
+            <img src="./img/logo.svg" alt="Логотип" />
+          </a>
           <ul>
-            <li><a href="#">Головна</a></li>
-            <li><a href="#">Перевізникам</a></li>
-            <li><a href="#">Про нас</a></li>
-            <li><a href="#">Профіль перевізника</a></li>
+            <li><a class="header-links" href="#top">Головна</a></li>
+            <li><a class="header-links" href="#drivers">Перевізникам</a></li>
+            <li><a class="header-links" href="#about">Про нас</a></li>
+            <li>
+              <a class="header-links" href="#profile">Профіль перевізника</a>
+            </li>
           </ul>
-          <button type="button">Створити профіль</button>
-          <button type="button">Увійти</button>
+          <div class="buttons">
+            <button class="create-profile-button" type="button">
+              Створити профіль
+            </button>
+            <button class="enter-button" type="button">Увійти</button>
+          </div>
         </nav>
-        <div class="profile-header">
+        <div id="profile" class="profile-header">
           <p class="breadcrumbs">Головна / Профіль перевізника / Stripe</p>
           <div class="profile-info">
             <img
@@ -28,12 +51,15 @@
               class="large-logo"
             />
             <div class="profile-text">
-              <h1>Stripe</h1>
-              <p>43 Поїздок</p>
+              <h1 class="stripe">Stripe</h1>
+              <p class="drive">43 Поїздок</p>
               <address>
                 <ul>
                   <li>
-                    <a href="https://stripe.com" target="_blank"
+                    <a
+                      class="social-links-header"
+                      href="https://stripe.com"
+                      target="_blank"
                       ><img
                         src="./img/site-icon.svg"
                         alt=""
@@ -41,7 +67,7 @@
                     >
                   </li>
                   <li>
-                    <a href="tel:+380735555555"
+                    <a class="social-links-header" href="tel:+380735555555"
                       ><img src="./img/phone-icon.svg" alt="" />+38 (073) 555 55
                       55</a
                     >
@@ -95,7 +121,7 @@
       </div>
     </header>
     <main>
-      <section class="description">
+      <section id="about" class="description">
         <div class="container">
           <div class="description-text">
             <h2>Опис перевізника</h2>
@@ -118,7 +144,10 @@
             <h2>Ми у соц. мережах</h2>
             <ul>
               <li>
-                <a href="https://twitter.com/stripe" target="_blank"
+                <a
+                  class="social-links-main"
+                  href="https://twitter.com/stripe"
+                  target="_blank"
                   ><img
                     src="./img/icon-twitter.svg"
                     alt="Іконка Твітера"
@@ -126,7 +155,10 @@
                 >
               </li>
               <li>
-                <a href="https://facebook.com" target="_blank"
+                <a
+                  class="social-links-main"
+                  href="https://facebook.com"
+                  target="_blank"
                   ><img
                     src="./img/icon-facebook.svg"
                     alt="Іконка Фейсбуку"
@@ -195,7 +227,7 @@
           </div>
         </div>
       </section>
-      <section class="drivers">
+      <section id="drivers" class="drivers">
         <div class="container">
           <h2>Наші водії</h2>
           <ul class="drivers-list">
@@ -206,8 +238,8 @@
                   alt="Фото Олександра"
                   class="driver-avatar"
                 />
-                <h4>Олександр</h4>
-                <p>Досвід роботи: 5 років</p>
+                <h4 class="name-driver">Олександр</h4>
+                <p class="our-drivers-color">Досвід роботи: 5 років</p>
                 <div class="driver-socials">
                   <img
                     src="./img/small-instagram-icon.svg"
@@ -227,8 +259,8 @@
                   alt="Фото Володимира"
                   class="driver-avatar"
                 />
-                <h4>Володимир</h4>
-                <p>Досвід роботи: 7 років</p>
+                <h4 class="name-driver">Володимир</h4>
+                <p class="our-drivers-color">Досвід роботи: 7 років</p>
                 <div class="driver-socials">
                   <img
                     src="./img/small-instagram-icon.svg"
@@ -248,8 +280,8 @@
                   alt="Фото Ірини"
                   class="driver-avatar"
                 />
-                <h4>Ірина</h4>
-                <p>Досвід роботи: 1 рік</p>
+                <h4 class="name-driver">Ірина</h4>
+                <p class="our-drivers-color">Досвід роботи: 1 рік</p>
                 <div class="driver-socials">
                   <img
                     src="./img/small-instagram-icon.svg"
@@ -269,8 +301,8 @@
                   alt="Фото Михайла"
                   class="driver-avatar"
                 />
-                <h4>Михайло</h4>
-                <p>Досвід роботи: 1 рік</p>
+                <h4 class="name-driver">Михайло</h4>
+                <p class="our-drivers-color">Досвід роботи: 1 рік</p>
                 <div class="driver-socials">
                   <img
                     src="./img/small-instagram-icon.svg"
@@ -290,8 +322,8 @@
                   alt="Фото Юлії"
                   class="driver-avatar"
                 />
-                <h4>Юлія</h4>
-                <p>Досвід роботи: 2 роки</p>
+                <h4 class="name-driver">Юлія</h4>
+                <p class="our-drivers-color">Досвід роботи: 2 роки</p>
                 <div class="driver-socials">
                   <img
                     src="./img/small-instagram-icon.svg"
@@ -307,7 +339,7 @@
           </ul>
         </div>
       </section>
-      <section class="service">
+      <section id="service" class="service">
         <div class="container">
           <h2 class="service-title">Сервіс</h2>
           <p class="service-subtitle">Найкращі умови для вашого комфорту</p>
@@ -315,62 +347,62 @@
             <li>
               <article class="service-item">
                 <img src="./img/conditioner.svg" alt="Кондиціонер" />
-                <h3>Кондиціонер</h3>
+                <h4>Кондиціонер</h4>
               </article>
             </li>
             <li>
               <article class="service-item">
                 <img src="./img/wifi.svg" alt="Вайфай" />
-                <h3>Wi-Fi</h3>
+                <h4>Wi-Fi</h4>
               </article>
             </li>
             <li>
               <article class="service-item">
                 <img src="./img/tv.svg" alt="TV" />
-                <h3>TV</h3>
+                <h4>TV</h4>
               </article>
             </li>
             <li>
               <article class="service-item">
                 <img src="./img/wc.svg" alt="Туалет" />
-                <h3>Туалет</h3>
+                <h4>Туалет</h4>
               </article>
             </li>
             <li>
               <article class="service-item">
                 <img src="./img/weekend.svg" alt="Зручні сидіння" />
-                <h3>Зручні сидіння</h3>
+                <h4>Зручні сидіння</h4>
               </article>
             </li>
             <li>
               <article class="service-item">
                 <img src="./img/transport.svg" alt="Перевозимо тварин" />
-                <h3>Перевозимо тварин</h3>
+                <h4>Перевозимо тварин</h4>
               </article>
             </li>
           </ul>
         </div>
       </section>
-      <section class="reviews">
+      <section id="reviews" class="reviews">
         <div class="container">
           <div class="reviews-header">
-            <h2>Що кажуть люди?</h2>
+            <h1>Що <span class="say-people">кажуть люди?</span></h1>
             <p lang="en">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
               enim ad minim veniam, quis nostrud exercitation ullamco laboris
               nisi ut aliquip ex ea commodo consequat.
             </p>
-            <button type="button">Залишити відгук</button>
+            <button class="review-button" type="button">Залишити відгук</button>
           </div>
           <ul class="reviews-list">
             <li>
               <article class="review-card">
                 <img src="./img/photo-ben-yardley.jpg" alt="Фото Бена Ярдлі" />
-                <h3>Ben Yardley</h3>
-                <p>Київ - Кишинів</p>
-                <p>1 May 2023</p>
-                <p lang="en">
+                <h3 class="review-name">Ben Yardley</h3>
+                <p class="location">Київ - Кишинів</p>
+                <p class="date-color">1 May 2023</p>
+                <p class="review-text-font" lang="en">
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
                   do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                   Ut enim ad minim veniam, quis nostrud exercitation ullamco
@@ -384,10 +416,10 @@
                   src="./img/photo-craig-martin.jpg"
                   alt="Фото Крейга Мартіна"
                 />
-                <h3>Craig Martin</h3>
-                <p>Львів - Париж</p>
-                <p>1 May 2023</p>
-                <p lang="en">
+                <h3 class="review-name">Craig Martin</h3>
+                <p class="location">Львів - Париж</p>
+                <p class="date-color">1 May 2023</p>
+                <p class="review-text-font" lang="en">
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
                   do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                   Ut enim ad minim veniam, quis nostrud exercitation ullamco
@@ -401,52 +433,63 @@
         </div>
       </section>
     </main>
-    <footer>
+    <footer id="contacts">
       <div class="container footer-top">
         <div class="footer-about">
           <img src="./img/logo-below.svg" alt="Логотип" />
-          <p>Платформа пошуку перевізників та бронювання поїздок</p>
+          <p class="search-platform-color">
+            Платформа пошуку перевізників та бронювання поїздок
+          </p>
         </div>
         <div class="footer-links">
-          <nav>
-            <h4>Клієнтам</h4>
-            <ul>
-              <li><a href="#">Головна</a></li>
-              <li><a href="#">Про нас</a></li>
-              <li><a href="#">Ціни</a></li>
-              <li><a href="#">Маршрути</a></li>
-              <li><a href="#">Політика приватності</a></li>
-            </ul>
-          </nav>
+          <h5 class="feedback-color">Клієнтам</h5>
+          <ul>
+            <li><a class="footer-links-color" href="#top">Головна</a></li>
+            <li><a class="footer-links-color" href="#about">Про нас</a></li>
+            <li><a class="footer-links-color" href="#">Ціни</a></li>
+            <li><a class="footer-links-color" href="#">Маршрути</a></li>
+            <li>
+              <a class="footer-links-color" href="#">Політика приватності</a>
+            </li>
+          </ul>
         </div>
         <div class="footer-carriers">
           <nav>
-            <h4>Перевізникам</h4>
+            <h5 class="feedback-color">Перевізникам</h5>
             <ul>
-              <li><a href="#">Help Docs</a></li>
-              <li><a href="#">Особистий кабінет</a></li>
-              <li><a href="#">Оновлення</a></li>
-              <li><a href="#">Контакти</a></li>
+              <li><a class="footer-links-color" href="#">Help Docs</a></li>
+              <li>
+                <a class="footer-links-color" href="#">Особистий кабінет</a>
+              </li>
+              <li><a class="footer-links-color" href="#">Оновлення</a></li>
+              <li>
+                <a class="footer-links-color" href="#contacts">Контакти</a>
+              </li>
             </ul>
           </nav>
         </div>
         <div class="footer-contact">
-          <h4>Зворотній зв’язок</h4>
-          <p>Маєш пропозиції щодо покращення сервісу - пиши нам!</p>
+          <h5 class="feedback-color">Зворотній зв’язок</h5>
+          <p class="footer-call-color">
+            Маєш пропозиції щодо покращення сервісу - пиши нам!
+          </p>
           <form>
             <input type="email" name="email" placeholder="Email Address" />
-            <button type="submit">Надіслати</button>
+            <button class="send-button" type="submit">Надіслати</button>
           </form>
           <address>
             <ul>
               <li>
-                <a href="tel:+380735555555"
+                <a class="social-links-grey" href="tel:+380735555555"
                   ><img src="./img/phone.svg" alt="номер телефону" />+ 38
                   (073)555 55 55</a
                 >
               </li>
               <li>
-                <a href="mailto:gmail@gmail.com" target="_blank"
+                <a
+                  class="social-links-grey"
+                  href="mailto:gmail@gmail.com"
+                  target="_blank"
                   ><img src="./img/mail.svg" alt="gmail" />gmail@gmail.com</a
                 >
               </li>
@@ -484,7 +527,7 @@
             </li>
           </ul>
         </nav>
-        <p>2024 @ Sprinters. All rights reserved.</p>
+        <p class="rights">2024 © Sprinters. All rights reserved.</p>
       </div>
     </footer>
   </body>
