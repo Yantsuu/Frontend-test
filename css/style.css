@@ -3,6 +3,10 @@
   --color-white: #ffffff;
 }
 
+* {
+  box-sizing: border-box;
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -13,6 +17,24 @@ body {
   font-size: 16px;
   font-weight: 400;
   line-height: 160%;
+  margin: 0;
+}
+
+.container {
+  width: 100%;
+  max-width: 1152px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin-top: 0;
 }
 
 h1 {
@@ -41,6 +63,189 @@ footer {
   background-color: #202430;
 }
 
+input {
+  padding: 12px 102px 12px 16px;
+}
+
+/* HEADER */
+header {
+  background-color: var(--color-white);
+}
+
+.header-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 24px 0;
+}
+
+.header-menu {
+  display: flex;
+  gap: 40px;
+  padding: 0;
+  margin: 0;
+}
+
+.header-menu li {
+  position: relative;
+}
+
+.header-buttons {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.profile-top {
+  display: flex;
+  align-items: flex-start;
+  gap: 24px;
+  margin-top: 40px;
+}
+
+.profile-main {
+  display: flex;
+  flex-direction: column;
+}
+
+.company-logo {
+  width: 189px;
+  flex-shrink: 0;
+}
+
+.title-row {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.trips-tag {
+  display: inline-flex;
+  align-items: center;
+  padding: 4px 12px;
+  border: 1px solid var(--color-brand);
+  color: var(--color-brand);
+}
+
+.contact-row {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  margin: 12px 0 24px 0;
+}
+
+.contact-row a {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.stats-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 40px;
+}
+
+.stat-item {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.stat-item img {
+  margin-top: 0px;
+}
+
+.stat-label {
+  margin: 0;
+  white-space: nowrap;
+}
+
+.stat-value {
+  margin: 0;
+  white-space: nowrap;
+}
+
+/* MAIN */
+.main-content-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 120px;
+  padding-top: 72px;
+  padding-bottom: 72px;
+}
+
+.gallery-truck {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 32px;
+}
+
+.gallery-truck img {
+  width: 100%;
+  height: auto;
+}
+
+.socials ul {
+  display: flex;
+  gap: 32px;
+  padding: 0;
+  margin-top: 20px;
+  margin-bottom: 32px;
+}
+
+.social-links-main {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border: 1px solid var(--color-brand);
+  padding: 8px;
+}
+
+.countries-block {
+  margin-bottom: 64px;
+}
+
+.countries-block ul {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  padding: 0;
+  margin-top: 20px;
+}
+
+.country-item {
+  width: auto;
+  max-width: none;
+}
+
+.country-item {
+  width: 45%;
+  max-width: 140px;
+}
+
+.country-inner {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.country-flag {
+  width: 42px;
+  height: 32px;
+  object-fit: cover;
+  border-radius: 2px;
+}
+
+.calendar-block {
+  margin-top: 0px;
+}
+
+.calendar-block h2 {
+  margin-bottom: 24px;
+}
+
 /* BUTTONS */
 .enter-button {
   background-color: var(--color-brand);
@@ -50,6 +255,7 @@ footer {
   font-family: Rubik, sans-serif;
   font-size: 16px;
   font-weight: 700;
+  padding: 12px 24px;
 }
 
 .enter-button:hover {
@@ -66,6 +272,7 @@ footer {
   font-family: Rubik, sans-serif;
   font-size: 16px;
   font-weight: 700;
+  padding: 12px 24px;
 }
 
 .create-profile-button:hover {
@@ -83,6 +290,7 @@ footer {
   font-size: 18px;
   font-weight: 700;
   line-height: 140%;
+  padding: 13px 28px;
 }
 
 .review-button:hover {
@@ -96,6 +304,7 @@ footer {
   color: var(--color-white);
   border: none;
   cursor: pointer;
+  padding: 13px 24px;
 }
 
 .send-button:hover {
@@ -111,6 +320,7 @@ footer {
 
 .stripe {
   font-family: Lato, sans-serif;
+  margin: 0;
 }
 
 .stat-label {
@@ -127,10 +337,6 @@ footer {
 
 .service-subtitle {
   color: #515b6f;
-}
-
-.drive {
-  color: var(--color-brand);
 }
 
 .name-driver {
@@ -199,11 +405,31 @@ footer {
   color: #515b6f;
   text-decoration: none;
   font-weight: 600;
+  padding: 8px 0;
+  display: inline-block;
+  transition: color 0.3s ease;
+}
+
+.header-links::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 4px;
+  background-color: var(--color-brand);
+  width: 100%;
+  transform: scaleX(0);
+  transform-origin: bottom center;
+  transition: transform 0.3s ease;
 }
 
 .header-links:hover {
   color: var(--color-brand);
   font-weight: 700;
+}
+
+.header-links:hover::after {
+  transform: scaleX(1);
 }
 
 .social-links-header {

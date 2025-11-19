@@ -23,11 +23,11 @@
   <body>
     <header id="top">
       <div class="container">
-        <nav>
+        <nav class="header-nav">
           <a href="index.html">
             <img src="./img/logo.svg" alt="Логотип" />
           </a>
-          <ul>
+          <ul class="header-menu">
             <li><a class="header-links" href="#top">Головна</a></li>
             <li><a class="header-links" href="#drivers">Перевізникам</a></li>
             <li><a class="header-links" href="#about">Про нас</a></li>
@@ -35,7 +35,7 @@
               <a class="header-links" href="#profile">Профіль перевізника</a>
             </li>
           </ul>
-          <div class="buttons">
+          <div class="header-buttons">
             <button class="create-profile-button" type="button">
               Створити профіль
             </button>
@@ -44,186 +44,184 @@
         </nav>
         <div id="profile" class="profile-header">
           <p class="breadcrumbs">Головна / Профіль перевізника / Stripe</p>
-          <div class="profile-info">
+          <div class="profile-top">
             <img
               src="./img/main-logo.svg"
               alt="Головне лого"
-              class="large-logo"
+              class="company-logo"
             />
-            <div class="profile-text">
-              <h1 class="stripe">Stripe</h1>
-              <p class="drive">43 Поїздок</p>
-              <address>
-                <ul>
-                  <li>
-                    <a
-                      class="social-links-header"
-                      href="https://stripe.com"
-                      target="_blank"
-                      ><img
-                        src="./img/site-icon.svg"
-                        alt=""
-                      />https://stripe.com</a
-                    >
-                  </li>
-                  <li>
-                    <a class="social-links-header" href="tel:+380735555555"
-                      ><img src="./img/phone-icon.svg" alt="" />+38 (073) 555 55
-                      55</a
-                    >
-                  </li>
-                </ul>
-              </address>
+            <div class="profile-main">
+              <div class="title-row">
+                <h1 class="stripe">Stripe</h1>
+                <span class="trips-tag">43 Поїздок</span>
+              </div>
+
+              <div class="contact-row">
+                <a
+                  class="social-links-header"
+                  href="https://stripe.com"
+                  target="_blank"
+                >
+                  <img src="./img/site-icon.svg" alt="" />https://stripe.com
+                </a>
+                <a class="social-links-header" href="tel:+380735555555">
+                  <img src="./img/phone-icon.svg" alt="" />+38 (073) 555 55 55
+                </a>
+              </div>
+              <div class="stats-row">
+                <div class="stat-item">
+                  <img src="./img/fire.svg" alt="" />
+                  <div>
+                    <p class="stat-label">На ринку від:</p>
+                    <p class="stat-value">Травень 31, 2011</p>
+                  </div>
+                </div>
+                <div class="stat-item">
+                  <img src="./img/people.svg" alt="" />
+                  <div>
+                    <p class="stat-label">Перевезених пасажирів</p>
+                    <p class="stat-value">4000+</p>
+                  </div>
+                </div>
+                <div class="stat-item">
+                  <img src="./img/bus.svg" alt="" />
+                  <div>
+                    <p class="stat-label">Автопарк</p>
+                    <p class="stat-value">8 бусів</p>
+                  </div>
+                </div>
+                <div class="stat-item">
+                  <img src="./img/global.svg" alt="" />
+                  <div>
+                    <p class="stat-label">Обслуговуємо</p>
+                    <p class="stat-value">8 країн</p>
+                  </div>
+                </div>
+                <div class="stat-item">
+                  <img src="./img/city.svg" alt="" />
+                  <div>
+                    <p class="stat-label">Місто</p>
+                    <p class="stat-value">Львів</p>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
-          <section class="stats">
-            <div class="stat-item">
-              <img src="./img/fire.svg" alt="icon" />
-              <div class="stat-text">
-                <p class="stat-label">На ринку від:</p>
-                <p class="stat-value">Травень 31, 2011</p>
-              </div>
-            </div>
-
-            <div class="stat-item">
-              <img src="./img/people.svg" alt="icon" />
-              <div class="stat-text">
-                <p class="stat-label">Перевезених пасажирів</p>
-                <p class="stat-value">4000+</p>
-              </div>
-            </div>
-
-            <div class="stat-item">
-              <img src="./img/bus.svg" alt="icon" />
-              <div class="stat-text">
-                <p class="stat-label">Автопарк</p>
-                <p class="stat-value">8 бусів</p>
-              </div>
-            </div>
-
-            <div class="stat-item">
-              <img src="./img/global.svg" alt="icon" />
-              <div class="stat-text">
-                <p class="stat-label">Обслуговуємо</p>
-                <p class="stat-value">8 країн</p>
-              </div>
-            </div>
-
-            <div class="stat-item">
-              <img src="./img/city.svg" alt="icon" />
-              <div class="stat-text">
-                <p class="stat-label">Місто</p>
-                <p class="stat-value">Львів</p>
-              </div>
-            </div>
-          </section>
         </div>
       </div>
     </header>
     <main>
       <section id="about" class="description">
         <div class="container">
-          <div class="description-text">
-            <h2>Опис перевізника</h2>
-            <p lang="en">
-              Stripe is a software platform for starting and running internet
-              businesses. Millions of businesses rely on Stripe’s software tools
-              to accept payments, expand globally, and manage their businesses
-              online. Stripe has been at the forefront of expanding internet
-              commerce, powering new business models, and supporting the latest
-              platforms, from marketplaces to mobile commerce sites. We believe
-              that growing the GDP of the internet is a problem rooted in code
-              and design, not finance. Stripe is built for developers, makers,
-              and creators. We work on solving the hard technical problems
-              necessary to build global economic infrastructure—from designing
-              highly reliable systems to developing advanced machine learning
-              algorithms to prevent fraud.
-            </p>
-          </div>
-          <div class="socials">
-            <h2>Ми у соц. мережах</h2>
-            <ul>
-              <li>
-                <a
-                  class="social-links-main"
-                  href="https://twitter.com/stripe"
-                  target="_blank"
-                  ><img
-                    src="./img/icon-twitter.svg"
-                    alt="Іконка Твітера"
-                  />twitter.com</a
-                >
-              </li>
-              <li>
-                <a
-                  class="social-links-main"
-                  href="https://facebook.com"
-                  target="_blank"
-                  ><img
-                    src="./img/icon-facebook.svg"
-                    alt="Іконка Фейсбуку"
-                  />facebook.com</a
-                >
-              </li>
-            </ul>
-            <div class="gallery-truck">
-              <img src="./img/photo-truck-one.jpg" alt="Фото грузовика" />
-              <img src="./img/photo-truck-two.jpg" alt="Фото грузовика" />
-              <img src="./img/photo-truck-three.jpg" alt="Фото грузовика" />
+          <div class="main-content-grid">
+            <div class="main-left-column">
+              <div class="description-text">
+                <h2>Опис перевізника</h2>
+                <p lang="en">
+                  Stripe is a software platform for starting and running
+                  internet businesses. Millions of businesses rely on Stripe’s
+                  software tools to accept payments, expand globally, and manage
+                  their businesses online. Stripe has been at the forefront of
+                  expanding internet commerce, powering new business models, and
+                  supporting the latest platforms, from marketplaces to mobile
+                  commerce sites. We believe that growing the GDP of the
+                  internet is a problem rooted in code and design, not finance.
+                  Stripe is built for developers, makers, and creators. We work
+                  on solving the hard technical problems necessary to build
+                  global economic infrastructure—from designing highly reliable
+                  systems to developing advanced machine learning algorithms to
+                  prevent fraud.
+                </p>
+              </div>
+              <div class="socials">
+                <h2>Ми у соц. мережах</h2>
+                <ul>
+                  <li>
+                    <a
+                      class="social-links-main"
+                      href="https://twitter.com/stripe"
+                      target="_blank"
+                      ><img
+                        src="./img/icon-twitter.svg"
+                        alt="Іконка Твітера"
+                      />twitter.com/stripe</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="social-links-main"
+                      href="https://facebook.com"
+                      target="_blank"
+                      ><img
+                        src="./img/icon-facebook.svg"
+                        alt="Іконка Фейсбуку"
+                      />facebook.com/StripeHQ</a
+                    >
+                  </li>
+                </ul>
+                <div class="gallery-truck">
+                  <img src="./img/photo-truck-one.jpg" alt="Фото грузовика" />
+                  <img src="./img/photo-truck-two.jpg" alt="Фото грузовика" />
+                  <img src="./img/photo-truck-three.jpg" alt="Фото грузовика" />
+                </div>
+              </div>
             </div>
-          </div>
-          <div>
-            <h2>Обслуговуємо країни</h2>
-            <ul>
-              <li class="country-item">
-                <div class="country-inner">
-                  <img
-                    src="./img/flag-of-france.svg"
-                    alt="Прапор Франції"
-                    class="country-flag"
-                  /><span>Франція</span>
-                </div>
-              </li>
-              <li class="country-item">
-                <div class="country-inner">
-                  <img
-                    src="./img/flag-of-italy.svg"
-                    alt="Прапор Італії"
-                    class="country-flag"
-                  /><span>Італія</span>
-                </div>
-              </li>
-              <li class="country-item">
-                <div class="country-inner">
-                  <img
-                    src="./img/flag-of-german.svg"
-                    alt="Прапор Німеччини"
-                    class="country-flag"
-                  /><span>Німеччина</span>
-                </div>
-              </li>
-              <li class="country-item">
-                <div class="country-inner">
-                  <img
-                    src="./img/netherlands-flag.svg"
-                    alt="Прапор Нідерландів"
-                    class="country-flag"
-                  /><span>Нідерланди</span>
-                </div>
-              </li>
-              <li class="country-item">
-                <div class="country-inner">
-                  <img
-                    src="./img/spain-flag.svg"
-                    alt="Прапор Іспанії"
-                    class="country-flag"
-                  /><span>Іспанія</span>
-                </div>
-              </li>
-            </ul>
-          </div>
-          <div>
-            <h2>Календар поїздок</h2>
+            <div class="main-right-column">
+              <div class="countries-block">
+                <h2>Обслуговуємо країни</h2>
+                <ul>
+                  <li class="country-item">
+                    <div class="country-inner">
+                      <img
+                        src="./img/flag-of-france.svg"
+                        alt="Прапор Франції"
+                        class="country-flag"
+                      /><span>Франція</span>
+                    </div>
+                  </li>
+                  <li class="country-item">
+                    <div class="country-inner">
+                      <img
+                        src="./img/flag-of-italy.svg"
+                        alt="Прапор Італії"
+                        class="country-flag"
+                      /><span>Італія</span>
+                    </div>
+                  </li>
+                  <li class="country-item">
+                    <div class="country-inner">
+                      <img
+                        src="./img/flag-of-german.svg"
+                        alt="Прапор Німеччини"
+                        class="country-flag"
+                      /><span>Німеччина</span>
+                    </div>
+                  </li>
+                  <li class="country-item">
+                    <div class="country-inner">
+                      <img
+                        src="./img/netherlands-flag.svg"
+                        alt="Прапор Нідерландів"
+                        class="country-flag"
+                      /><span>Нідерланди</span>
+                    </div>
+                  </li>
+                  <li class="country-item">
+                    <div class="country-inner">
+                      <img
+                        src="./img/spain-flag.svg"
+                        alt="Прапор Іспанії"
+                        class="country-flag"
+                      /><span>Іспанія</span>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+              <div class="calendar-block">
+                <h2>Календар поїздок</h2>
+                <div class="calendar-widget"></div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
