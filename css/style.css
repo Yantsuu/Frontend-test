@@ -109,7 +109,7 @@ header {
 }
 
 .company-logo {
-  width: 189px;
+  width: 178px;
   flex-shrink: 0;
 }
 
@@ -143,7 +143,7 @@ header {
 .stats-row {
   display: flex;
   align-items: flex-start;
-  gap: 40px;
+  gap: 32px;
 }
 
 .stat-item {
@@ -167,10 +167,19 @@ header {
 }
 
 /* MAIN */
+/* DISCRIPTION */
+.description-carrier {
+  margin-bottom: 16px;
+}
+
+.description-carrier-text {
+  margin-bottom: 24px;
+}
+
 .main-content-grid {
   display: grid;
   grid-template-columns: 2fr 1fr;
-  gap: 120px;
+  gap: 64px;
   padding-top: 72px;
   padding-bottom: 72px;
 }
@@ -179,7 +188,7 @@ header {
   display: flex;
   flex-direction: column;
   gap: 12px;
-  margin-top: 32px;
+  margin-top: 40px;
 }
 
 .gallery-truck img {
@@ -195,6 +204,10 @@ header {
   margin-bottom: 32px;
 }
 
+.on-social {
+  margin-bottom: 16px;
+}
+
 .social-links-main {
   display: flex;
   align-items: center;
@@ -207,12 +220,18 @@ header {
   margin-bottom: 64px;
 }
 
+.serve-countries {
+  margin-bottom: 24px;
+  white-space: nowrap;
+}
+
 .countries-block ul {
   display: flex;
   flex-direction: column;
   gap: 14px;
   padding: 0;
-  margin-top: 20px;
+  margin-top: 24px;
+  margin-bottom: 24px;
 }
 
 .country-item {
@@ -238,12 +257,298 @@ header {
   border-radius: 2px;
 }
 
+.all-countries-link {
+  color: var(--color-brand);
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-top: 14px;
+}
+
+.dropdown-arrow {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  position: relative;
+}
+
+.dropdown-arrow::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 6px;
+  height: 6px;
+  border-right: 2px solid var(--color-brand);
+  border-bottom: 2px solid var(--color-brand);
+  transform: rotate(45deg);
+  margin-top: -2px;
+}
+
+.countries-separator {
+  width: 100%;
+  height: 1px;
+  border-bottom: 1px solid rgba(214, 221, 235, 0.4);
+}
+
+.all-country {
+  color: initial;
+}
+
 .calendar-block {
   margin-top: 0px;
 }
 
 .calendar-block h2 {
   margin-bottom: 24px;
+}
+
+/* DRIVERS */
+.drivers {
+  padding-top: 72px;
+  padding-bottom: 72px;
+}
+
+.drivers .container {
+  display: flex;
+  flex-direction: column;
+  gap: 11px;
+}
+
+.all-drivers-link {
+  color: var(--color-brand);
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.drivers-list {
+  display: flex;
+  gap: 16px;
+  padding: 0;
+  margin: 0;
+}
+
+.drivers-list li {
+  width: calc(100% / 5 - 16px * 4 / 5);
+  border-radius: 4px;
+  border: 1px solid rgba(214, 221, 235, 1);
+}
+
+.driver-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 24px 24px 16px;
+  border-radius: 8px;
+  background-color: var(--color-white);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
+}
+
+.driver-avatar {
+  width: 80px;
+  border-radius: 50%;
+  margin-bottom: 16px;
+  object-fit: cover;
+}
+
+.name-driver {
+  margin-bottom: 4px;
+}
+
+.work-experience {
+  color: #7c8493;
+  margin-bottom: 16px;
+  white-space: nowrap;
+}
+
+.driver-socials {
+  display: flex;
+  gap: 12px;
+}
+
+/* SERVISE */
+.service {
+  padding-top: 72px;
+  padding-bottom: 72px;
+}
+
+.service-title {
+  margin-bottom: 8px;
+}
+
+.service-subtitle {
+  color: #515b6f;
+  margin-top: 0;
+  margin-bottom: 24px;
+}
+
+.service-list {
+  font-family: Lato, sans-serif;
+  font-size: 24px;
+  display: flex;
+  gap: 32px;
+  padding: 0;
+  margin: 0;
+}
+
+.service-list li {
+  margin: 0;
+  padding: 0;
+}
+
+.service-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.service-item h4 {
+  line-height: 1;
+  margin: 0;
+}
+
+.no-wrap-text {
+  white-space: nowrap;
+}
+
+.service-item img {
+  width: 40px;
+  height: 40px;
+  flex-shrink: 0;
+}
+
+/* REVIEWS */
+.reviews {
+  padding-top: 72px;
+  padding-bottom: 72px;
+  position: relative;
+  background-color: #f8f8fc;
+  overflow: hidden;
+}
+
+.reviews-content {
+  display: flex;
+  align-items: flex-start;
+  gap: 32px;
+}
+
+.review-top {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+  margin-bottom: 22px;
+}
+
+.review-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.review-text-font {
+  font-family: Rubik, sans-serif;
+  flex-grow: 1;
+  overflow: hidden;
+  margin-bottom: auto;
+}
+
+.reviews-header {
+  max-width: 384px;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.reviews-header h1 {
+  flex-wrap: nowrap;
+  margin-bottom: 0;
+}
+
+.reviews-list {
+  font-family: Roboto, sans-serif;
+  display: flex;
+  gap: 32px;
+  padding: 0;
+  margin: 0;
+  flex-wrap: nowrap;
+  max-width: calc(352px * 2 + 32px);
+}
+
+.reviews-list li {
+  width: 352px;
+  flex-shrink: 0;
+  list-style: none;
+}
+
+.review-card {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+  height: 411px;
+}
+
+.review-avatar {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 16px;
+}
+
+.date-color {
+  color: #7c8493;
+  font-size: 14px;
+  line-height: 100%;
+  margin-bottom: 16px;
+}
+
+.review-rating {
+  display: flex;
+  gap: 4px;
+  margin-top: 24px;
+}
+
+.star-icon {
+  display: block;
+  width: 16.5px;
+  height: 16.5px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  background-image: url('../img/star.svg');
+}
+
+.reviews-pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  padding-top: 32px;
+}
+
+.pagination-dot {
+  width: 12px;
+  height: 12px;
+  background-color: #d6ddeb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: 0.3s;
+}
+
+.pagination-dot.active {
+  width: 12px;
+  height: 12px;
+  background-color: var(--color-brand);
+  border-radius: 50px;
 }
 
 /* BUTTONS */
@@ -331,22 +636,9 @@ header {
   font-weight: 600;
 }
 
-.our-drivers-color {
-  color: #7c8493;
-}
-
-.service-subtitle {
-  color: #515b6f;
-}
-
 .name-driver {
   font-size: 18px;
   font-weight: 600;
-}
-
-.service-list {
-  font-family: Lato, sans-serif;
-  font-size: 24px;
 }
 
 .say-people {
@@ -358,26 +650,14 @@ header {
   font-size: 14px;
   font-weight: 500;
   line-height: 100%;
-}
-
-.date-color {
-  color: #7c8493;
-  font-size: 14px;
-  line-height: 100%;
-}
-
-.reviews-list {
-  font-family: Roboto, sans-serif;
+  margin-bottom: 8px;
 }
 
 .review-name {
   font-size: 24px;
   font-weight: 600;
   line-height: 24px;
-}
-
-.review-text-font {
-  font-family: Rubik, sans-serif;
+  margin-bottom: 8px;
 }
 
 .search-platform-color {

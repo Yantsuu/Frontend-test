@@ -116,8 +116,8 @@
           <div class="main-content-grid">
             <div class="main-left-column">
               <div class="description-text">
-                <h2>Опис перевізника</h2>
-                <p lang="en">
+                <h2 class="description-carrier">Опис перевізника</h2>
+                <p class="description-carrier-text" lang="en">
                   Stripe is a software platform for starting and running
                   internet businesses. Millions of businesses rely on Stripe’s
                   software tools to accept payments, expand globally, and manage
@@ -134,7 +134,7 @@
                 </p>
               </div>
               <div class="socials">
-                <h2>Ми у соц. мережах</h2>
+                <h2 class="on-social">Ми у соц. мережах</h2>
                 <ul>
                   <li>
                     <a
@@ -168,7 +168,7 @@
             </div>
             <div class="main-right-column">
               <div class="countries-block">
-                <h2>Обслуговуємо країни</h2>
+                <h2 class="serve-countries">Обслуговуємо країни</h2>
                 <ul>
                   <li class="country-item">
                     <div class="country-inner">
@@ -215,7 +215,14 @@
                       /><span>Іспанія</span>
                     </div>
                   </li>
+                  <li class="all-country">
+                    <a href="#" class="all-countries-link">
+                      Усі країни
+                      <span class="dropdown-arrow"></span>
+                    </a>
+                  </li>
                 </ul>
+                <div class="countries-separator"></div>
               </div>
               <div class="calendar-block">
                 <h2>Календар поїздок</h2>
@@ -237,7 +244,7 @@
                   class="driver-avatar"
                 />
                 <h4 class="name-driver">Олександр</h4>
-                <p class="our-drivers-color">Досвід роботи: 5 років</p>
+                <p class="work-experience">Досвід роботи: 5 років</p>
                 <div class="driver-socials">
                   <img
                     src="./img/small-instagram-icon.svg"
@@ -258,7 +265,7 @@
                   class="driver-avatar"
                 />
                 <h4 class="name-driver">Володимир</h4>
-                <p class="our-drivers-color">Досвід роботи: 7 років</p>
+                <p class="work-experience">Досвід роботи: 7 років</p>
                 <div class="driver-socials">
                   <img
                     src="./img/small-instagram-icon.svg"
@@ -279,7 +286,7 @@
                   class="driver-avatar"
                 />
                 <h4 class="name-driver">Ірина</h4>
-                <p class="our-drivers-color">Досвід роботи: 1 рік</p>
+                <p class="work-experience">Досвід роботи: 1 рік</p>
                 <div class="driver-socials">
                   <img
                     src="./img/small-instagram-icon.svg"
@@ -300,7 +307,7 @@
                   class="driver-avatar"
                 />
                 <h4 class="name-driver">Михайло</h4>
-                <p class="our-drivers-color">Досвід роботи: 1 рік</p>
+                <p class="work-experience">Досвід роботи: 1 рік</p>
                 <div class="driver-socials">
                   <img
                     src="./img/small-instagram-icon.svg"
@@ -321,7 +328,7 @@
                   class="driver-avatar"
                 />
                 <h4 class="name-driver">Юлія</h4>
-                <p class="our-drivers-color">Досвід роботи: 2 роки</p>
+                <p class="work-experience">Досвід роботи: 2 роки</p>
                 <div class="driver-socials">
                   <img
                     src="./img/small-instagram-icon.svg"
@@ -351,7 +358,7 @@
             <li>
               <article class="service-item">
                 <img src="./img/wifi.svg" alt="Вайфай" />
-                <h4>Wi-Fi</h4>
+                <h4 class="no-wrap-text">Wi-Fi</h4>
               </article>
             </li>
             <li>
@@ -382,7 +389,7 @@
         </div>
       </section>
       <section id="reviews" class="reviews">
-        <div class="container">
+        <div class="container reviews-content">
           <div class="reviews-header">
             <h1>Що <span class="say-people">кажуть люди?</span></h1>
             <p lang="en">
@@ -396,27 +403,47 @@
           <ul class="reviews-list">
             <li>
               <article class="review-card">
-                <img src="./img/photo-ben-yardley.jpg" alt="Фото Бена Ярдлі" />
-                <h3 class="review-name">Ben Yardley</h3>
-                <p class="location">Київ - Кишинів</p>
-                <p class="date-color">1 May 2023</p>
+                <div class="review-top">
+                  <img
+                    src="./img/photo-ben-yardley.jpg"
+                    alt="Фото Бена Ярдлі"
+                    class="review-avatar"
+                  />
+                  <div class="review-info">
+                    <h3 class="review-name">Ben Yardley</h3>
+                    <p class="location">Київ - Кишинів</p>
+                    <p class="date-color">1 May 2023</p>
+                  </div>
+                </div>
                 <p class="review-text-font" lang="en">
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
                   do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                   Ut enim ad minim veniam, quis nostrud exercitation ullamco
                   laboris nisi ut aliquip ex ea commodo consequat.
                 </p>
+                <div class="review-rating">
+                  <span class="star-icon"></span>
+                  <span class="star-icon"></span>
+                  <span class="star-icon"></span>
+                  <span class="star-icon"></span>
+                  <span class="star-icon"></span>
+                </div>
               </article>
             </li>
             <li>
               <article class="review-card">
-                <img
-                  src="./img/photo-craig-martin.jpg"
-                  alt="Фото Крейга Мартіна"
-                />
-                <h3 class="review-name">Craig Martin</h3>
-                <p class="location">Львів - Париж</p>
-                <p class="date-color">1 May 2023</p>
+                <div class="review-top">
+                  <img
+                    src="./img/photo-craig-martin.jpg"
+                    alt="Фото Крейга Мартіна"
+                    class="review-avatar"
+                  />
+                  <div class="review-info">
+                    <h3 class="review-name">Craig Martin</h3>
+                    <p class="location">Львів - Париж</p>
+                    <p class="date-color">1 May 2023</p>
+                  </div>
+                </div>
                 <p class="review-text-font" lang="en">
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
                   do eiusmod tempor incididunt ut labore et dolore magna aliqua.
@@ -425,9 +452,24 @@
                   dolor sit amet, consectetur adipiscing elit, sed do eiusmod
                   tempor.
                 </p>
+                <div class="review-rating">
+                  <span class="star-icon"></span>
+                  <span class="star-icon"></span>
+                  <span class="star-icon"></span>
+                  <span class="star-icon"></span>
+                  <span class="star-icon"></span>
+                </div>
               </article>
             </li>
           </ul>
+        </div>
+        <div class="reviews-pagination">
+          <span class="pagination-dot active"></span>
+          <span class="pagination-dot"></span>
+          <span class="pagination-dot"></span>
+          <span class="pagination-dot"></span>
+          <span class="pagination-dot"></span>
+          <span class="pagination-dot"></span>
         </div>
       </section>
     </main>
