@@ -325,13 +325,136 @@ header {
 .all-country {
   color: initial;
 }
-
-.calendar-block {
-  margin-top: 0px;
-}
-
+/* CALENDAR */
 .calendar-block h2 {
   margin-bottom: 24px;
+}
+
+.calendar-block {
+  margin-top: 40px;
+}
+
+.calendar-title {
+  font-family: Lato, sans-serif;
+  font-size: 32px;
+  font-weight: 800;
+  line-height: 120%;
+  margin-bottom: 24px;
+}
+
+.calendar-card {
+  position: relative;
+  max-width: 350px;
+  padding: 24px 24px 24px 24px;
+  border: 1px solid #d6ddeb;
+  box-shadow: 0 24px 60px rgba(20, 24, 45, 0.18);
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.calendar-buy-btn {
+  width: 100%;
+  border: 1px solid #d6ddeb;
+  background-color: var(--color-white);
+  padding: 12px 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  font-family: Rubik, sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--color-brand);
+  cursor: pointer;
+}
+
+.calendar-buy-plus {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: #4640de;
+  font-size: 20px;
+  line-height: 1;
+}
+
+/* FLATPICKR */
+.flatpickr-calendar {
+  position: static !important;
+  width: 100% !important;
+  border: none !important;
+  box-shadow: none !important;
+  position: relative !important;
+  font-family: Rubik, sans-serif;
+}
+
+.flatpickr-current-month {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 6px !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  height: 40px !important;
+  line-height: 40px !important;
+}
+
+.flatpickr-prev-month {
+  order: 1;
+}
+
+.flatpickr-next-month {
+  order: 3;
+}
+
+.year-static,
+.cur-month {
+  font-size: 18px !important;
+  font-weight: 700 !important;
+  color: #25324b !important;
+}
+
+.flatpickr-monthDropdown-months {
+  display: none !important;
+}
+
+.flatpickr-weekdays {
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+.flatpickr-weekday {
+  color: #7c8493;
+  font-size: 16px !important;
+  font-weight: 500;
+}
+
+.dayContainer {
+  padding: 0;
+}
+
+.flatpickr-day {
+  border-radius: 50%;
+  width: 42px;
+  height: 36px;
+  line-height: 160%;
+  margin: 0px;
+}
+
+.flatpickr-day.selected,
+.flatpickr-day.selected:hover {
+  background: #4640de !important;
+  border-color: #4640de !important;
+  color: #fff !important;
+}
+
+.flatpickr-day.today:not(.selected) {
+  border-color: #4640de;
+}
+
+.flatpickr-day.prevMonthDay,
+.flatpickr-day.nextMonthDay {
+  color: #d6ddeb;
 }
 
 /* DRIVERS */
@@ -630,8 +753,8 @@ footer {
 }
 
 .footer-about img {
-  width: 180px;
-  margin-bottom: 24px;
+  width: 160px;
+  margin-bottom: 39px;
 }
 
 .footer-about p {
@@ -645,7 +768,7 @@ footer {
   color: #ffffff;
   font-size: 18px;
   font-weight: 600;
-  margin-bottom: 24px;
+  margin-bottom: 18px;
 }
 
 .footer-links ul,
@@ -655,7 +778,7 @@ footer {
   margin: 0;
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 16px;
 }
 
 .footer-links-color {
@@ -675,11 +798,10 @@ footer {
 
 .footer-contact input {
   height: 48px;
-  background-color: #2a2e3c;
   border: 1px solid #3a3e4d;
-  border-radius: 6px 0 0 6px;
   color: #fff;
-  padding-left: 16px;
+  padding: 12px 16px;
+  margin-right: 8px;
 }
 
 .send-button {
@@ -687,7 +809,7 @@ footer {
   color: var(--color-white);
   border: none;
   cursor: pointer;
-  padding: 13px 24px;
+  padding: 12px 24px;
 }
 
 .send-button:hover {
@@ -716,19 +838,19 @@ footer {
   justify-content: space-between;
   align-items: center;
   border-top: 1px solid rgba(255, 255, 255, 0.08);
-  margin-top: 72px;
+  margin-top: 112px;
   padding-top: 32px;
 }
 
 .footer-socials ul {
   display: flex;
-  gap: 16px;
+  gap: 24px;
   padding: 0;
 }
 
 .footer-socials img {
-  width: 36px;
-  height: 36px;
+  width: 32px;
+  height: 32px;
   opacity: 0.8;
   transition: 0.2s;
 }

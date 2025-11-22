@@ -18,6 +18,10 @@
       href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css"
+    />
     <link rel="stylesheet" href="./css/style.css" />
   </head>
   <body>
@@ -225,8 +229,14 @@
                 <div class="countries-separator"></div>
               </div>
               <div class="calendar-block">
-                <h2>Календар поїздок</h2>
-                <div class="calendar-widget"></div>
+                <h2 class="calendar-title">Календар поїздок</h2>
+                <div class="calendar-card">
+                  <button class="calendar-buy-btn" type="button">
+                    <span class="calendar-buy-plus">+</span>
+                    Купити квиток
+                  </button>
+                  <div id="trip-calendar"></div>
+                </div>
               </div>
             </div>
           </div>
@@ -574,5 +584,72 @@
         </div>
       </div>
     </footer>
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        const fp = flatpickr('#trip-calendar', {
+          inline: true,
+          locale: 'uk',
+          dateFormat: 'd.m.Y',
+          defaultDate: 'today',
+          minDate: 'today',
+
+          prevArrow:
+            '<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="#4640DE"><path d="M12 4L7 10L12 16"/></svg>',
+          nextArrow:
+            '<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="#4640DE"><path d="M8 4L13 10L8 16"/></svg>',
+
+          onReady(_, __, instance) {
+            customizeHeader(instance);
+          },
+
+          onMonthChange(_, __, instance) {
+            customizeHeader(instance);
+          },
+        });
+
+        function customizeHeader(instance) {
+          const header = instance.calendarContainer.querySelector(
+            '.flatpickr-current-month'
+          );
+          if (!header) return;
+
+          const monthDropdown = header.querySelector(
+            '.flatpickr-monthDropdown-months'
+          );
+          const yearInput = header.querySelector('.cur-year');
+
+          if (monthDropdown) {
+            monthDropdown.style.display = 'none';
+          }
+
+          let monthStatic = header.querySelector('.month-static');
+          if (!monthStatic) {
+            monthStatic = document.createElement('span');
+            monthStatic.className = 'month-static';
+            monthStatic.style.fontSize = '18px';
+            monthStatic.style.fontWeight = '700';
+            monthStatic.style.marginRight = '6px';
+            header.appendChild(monthStatic);
+          }
+          monthStatic.textContent =
+            instance.l10n.months.longhand[instance.currentMonth];
+
+          if (yearInput) {
+            yearInput.style.display = 'none';
+          }
+
+          let yearStatic = header.querySelector('.year-static');
+          if (!yearStatic) {
+            yearStatic = document.createElement('span');
+            yearStatic.className = 'year-static';
+            yearStatic.style.fontSize = '18px';
+            yearStatic.style.fontWeight = '700';
+            header.appendChild(yearStatic);
+          }
+          yearStatic.textContent = instance.currentYear;
+        }
+      });
+    </script>
   </body>
 </html>
