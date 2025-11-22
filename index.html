@@ -43,11 +43,18 @@
             <button class="create-profile-button" type="button">
               Створити профіль
             </button>
+            <span class="header-divider"></span>
             <button class="enter-button" type="button">Увійти</button>
           </div>
         </nav>
-        <div id="profile" class="profile-header">
-          <p class="breadcrumbs">Головна / Профіль перевізника / Stripe</p>
+      </div>
+      <div id="profile" class="profile-header">
+        <div class="container">
+          <p class="breadcrumbs">
+            <a href="#top" class="crumb-link">Головна</a> /
+            <a href="#profile" class="crumb-link">Профіль перевізника</a> /
+            <a href="#top" class="crumb-link">Stripe</a>
+          </p>
           <div class="profile-top">
             <img
               src="./img/main-logo.svg"
@@ -235,6 +242,25 @@
                     <span class="calendar-buy-plus">+</span>
                     Купити квиток
                   </button>
+                  <div class="calendar-header-custom">
+                    <p id="calendar-title" class="calendar-title-custom">...</p>
+                    <div class="calendar-arrows">
+                      <button id="calendar-prev" class="calendar-arrow">
+                        <img
+                          src="./img/chevron.svg"
+                          class="chevron chevron-left"
+                          alt=""
+                        />
+                      </button>
+                      <button id="calendar-next" class="calendar-arrow">
+                        <img
+                          src="./img/chevron.svg"
+                          class="chevron chevron-right"
+                          alt=""
+                        />
+                      </button>
+                    </div>
+                  </div>
                   <div id="trip-calendar"></div>
                 </div>
               </div>
@@ -244,7 +270,10 @@
       </section>
       <section id="drivers" class="drivers">
         <div class="container">
-          <h2>Наші водії</h2>
+          <div class="drivers-header">
+            <h2>Наші водії</h2>
+            <a href="#" class="all-drivers-link">Усі водії (7)</a>
+          </div>
           <ul class="drivers-list">
             <li>
               <article class="driver-card">
@@ -354,6 +383,7 @@
           </ul>
         </div>
       </section>
+      <div class="drivers-separator"></div>
       <section id="service" class="service">
         <div class="container">
           <h2 class="service-title">Сервіс</h2>
@@ -523,7 +553,8 @@
         <div class="footer-contact">
           <h5 class="feedback-color">Зворотній зв’язок</h5>
           <p class="footer-call-color">
-            Маєш пропозиції щодо покращення сервісу - пиши нам!
+            Маєш пропозиції щодо покращення<br />
+            сервісу - пиши нам!
           </p>
           <form>
             <input type="email" name="email" placeholder="Email Address" />
@@ -587,68 +618,38 @@
     <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
     <script>
       document.addEventListener('DOMContentLoaded', function () {
+        const calendarTitle = document.getElementById('calendar-title');
+        const btnPrev = document.getElementById('calendar-prev');
+        const btnNext = document.getElementById('calendar-next');
+
         const fp = flatpickr('#trip-calendar', {
           inline: true,
-          locale: 'uk',
-          dateFormat: 'd.m.Y',
+          locale: 'en',
           defaultDate: 'today',
           minDate: 'today',
 
-          prevArrow:
-            '<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="#4640DE"><path d="M12 4L7 10L12 16"/></svg>',
-          nextArrow:
-            '<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="#4640DE"><path d="M8 4L13 10L8 16"/></svg>',
-
-          onReady(_, __, instance) {
-            customizeHeader(instance);
+          onReady: function (selectedDates, dateStr, instance) {
+            updateTitle(instance);
           },
-
-          onMonthChange(_, __, instance) {
-            customizeHeader(instance);
+          onMonthChange: function (selectedDates, dateStr, instance) {
+            updateTitle(instance);
           },
         });
 
-        function customizeHeader(instance) {
-          const header = instance.calendarContainer.querySelector(
-            '.flatpickr-current-month'
-          );
-          if (!header) return;
-
-          const monthDropdown = header.querySelector(
-            '.flatpickr-monthDropdown-months'
-          );
-          const yearInput = header.querySelector('.cur-year');
-
-          if (monthDropdown) {
-            monthDropdown.style.display = 'none';
-          }
-
-          let monthStatic = header.querySelector('.month-static');
-          if (!monthStatic) {
-            monthStatic = document.createElement('span');
-            monthStatic.className = 'month-static';
-            monthStatic.style.fontSize = '18px';
-            monthStatic.style.fontWeight = '700';
-            monthStatic.style.marginRight = '6px';
-            header.appendChild(monthStatic);
-          }
-          monthStatic.textContent =
-            instance.l10n.months.longhand[instance.currentMonth];
-
-          if (yearInput) {
-            yearInput.style.display = 'none';
-          }
-
-          let yearStatic = header.querySelector('.year-static');
-          if (!yearStatic) {
-            yearStatic = document.createElement('span');
-            yearStatic.className = 'year-static';
-            yearStatic.style.fontSize = '18px';
-            yearStatic.style.fontWeight = '700';
-            header.appendChild(yearStatic);
-          }
-          yearStatic.textContent = instance.currentYear;
+        function updateTitle(instance) {
+          const m = instance.currentMonth;
+          const y = instance.currentYear;
+          const monthName = instance.l10n.months.longhand[m];
+          calendarTitle.textContent = `${monthName} ${y}`;
         }
+
+        btnPrev.addEventListener('click', () => {
+          fp.changeMonth(-1);
+        });
+
+        btnNext.addEventListener('click', () => {
+          fp.changeMonth(1);
+        });
       });
     </script>
   </body>
