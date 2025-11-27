@@ -601,6 +601,8 @@ input {
   height: 36px;
   line-height: 36px;
   margin: 0;
+  font-size: 16px;
+  font-weight: 500;
 }
 
 .flatpickr-day.selected,

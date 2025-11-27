@@ -2,8 +2,12 @@
 <html lang="uk">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+    />
     <title>Stripe</title>
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -18,36 +22,55 @@
       href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
       rel="stylesheet"
     />
+
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css"
     />
+
     <link rel="stylesheet" href="./css/style.css" />
   </head>
   <body>
-    <header id="top">
+    <header id="top" class="site-header">
       <div class="container">
-        <nav class="header-nav">
-          <a href="index.html">
-            <img src="./img/logo.svg" alt="Логотип" />
+        <nav class="header-nav" aria-label="Головна навігація">
+          <a href="index.html" class="header-logo">
+            <img src="./img/logo.svg" alt="Логотип Sprinters" />
           </a>
-          <ul class="header-menu">
-            <li><a class="header-links" href="#top">Головна</a></li>
-            <li><a class="header-links" href="#drivers">Перевізникам</a></li>
-            <li><a class="header-links" href="#about">Про нас</a></li>
-            <li>
-              <a class="header-links" href="#profile">Профіль перевізника</a>
-            </li>
-          </ul>
-          <div class="header-buttons">
-            <button class="create-profile-button" type="button">
-              Створити профіль
-            </button>
-            <span class="header-divider"></span>
-            <button class="enter-button" type="button">Увійти</button>
+
+          <button
+            class="burger"
+            type="button"
+            aria-label="Відкрити меню"
+            aria-expanded="false"
+            aria-controls="main-navigation"
+          >
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+
+          <div class="header-nav-inner" id="main-navigation">
+            <ul class="header-menu">
+              <li><a class="header-links" href="#top">Головна</a></li>
+              <li><a class="header-links" href="#drivers">Перевізникам</a></li>
+              <li><a class="header-links" href="#about">Про нас</a></li>
+              <li>
+                <a class="header-links" href="#profile">Профіль перевізника</a>
+              </li>
+            </ul>
+
+            <div class="header-buttons">
+              <button class="create-profile-button" type="button">
+                Створити профіль
+              </button>
+              <span class="header-divider" aria-hidden="true"></span>
+              <button class="enter-button" type="button">Увійти</button>
+            </div>
           </div>
         </nav>
       </div>
+
       <div id="profile" class="profile-header">
         <div class="container">
           <p class="breadcrumbs">
@@ -55,12 +78,14 @@
             <a href="#profile" class="crumb-link">Профіль перевізника</a> /
             <a href="#top" class="crumb-link">Stripe</a>
           </p>
+
           <div class="profile-top">
             <img
               src="./img/main-logo.svg"
-              alt="Головне лого"
+              alt="Логотип компанії Stripe"
               class="company-logo"
             />
+
             <div class="profile-main">
               <div class="title-row">
                 <h1 class="stripe">Stripe</h1>
@@ -72,6 +97,7 @@
                   class="social-links-header"
                   href="https://stripe.com"
                   target="_blank"
+                  rel="noopener"
                 >
                   <img src="./img/site-icon.svg" alt="" />https://stripe.com
                 </a>
@@ -79,6 +105,7 @@
                   <img src="./img/phone-icon.svg" alt="" />+38 (073) 555 55 55
                 </a>
               </div>
+
               <div class="stats-row">
                 <div class="stat-item">
                   <img src="./img/fire.svg" alt="" />
@@ -121,6 +148,7 @@
         </div>
       </div>
     </header>
+
     <main>
       <section id="about" class="description">
         <div class="container">
@@ -144,50 +172,61 @@
                   prevent fraud.
                 </p>
               </div>
+
               <div class="socials">
                 <h2 class="on-social">Ми у соц. мережах</h2>
-                <ul>
+                <ul class="socials-list">
                   <li>
                     <a
                       class="social-links-main"
                       href="https://twitter.com/stripe"
                       target="_blank"
-                      ><img
+                      rel="noopener"
+                    >
+                      <img
                         src="./img/icon-twitter.svg"
                         alt="Іконка Твітера"
-                      />twitter.com/stripe</a
-                    >
+                      />twitter.com/stripe
+                    </a>
                   </li>
                   <li>
                     <a
                       class="social-links-main"
-                      href="https://facebook.com"
+                      href="https://facebook.com/StripeHQ"
                       target="_blank"
-                      ><img
+                      rel="noopener"
+                    >
+                      <img
                         src="./img/icon-facebook.svg"
                         alt="Іконка Фейсбуку"
-                      />facebook.com/StripeHQ</a
-                    >
+                      />facebook.com/StripeHQ
+                    </a>
                   </li>
                 </ul>
+
                 <div class="gallery-truck">
-                  <img src="./img/photo-truck-one.jpg" alt="Фото грузовика" />
-                  <img src="./img/photo-truck-two.jpg" alt="Фото грузовика" />
-                  <img src="./img/photo-truck-three.jpg" alt="Фото грузовика" />
+                  <img src="./img/photo-truck-one.jpg" alt="Фото грузовика 1" />
+                  <img src="./img/photo-truck-two.jpg" alt="Фото грузовика 2" />
+                  <img
+                    src="./img/photo-truck-three.jpg"
+                    alt="Фото грузовика 3"
+                  />
                 </div>
               </div>
             </div>
-            <div class="main-right-column">
-              <div class="countries-block">
+
+            <aside class="main-right-column" aria-label="Країни та календар">
+              <section class="countries-block">
                 <h2 class="serve-countries">Обслуговуємо країни</h2>
-                <ul>
+                <ul class="countries-list">
                   <li class="country-item">
                     <div class="country-inner">
                       <img
                         src="./img/flag-of-france.svg"
                         alt="Прапор Франції"
                         class="country-flag"
-                      /><span>Франція</span>
+                      />
+                      <span>Франція</span>
                     </div>
                   </li>
                   <li class="country-item">
@@ -196,7 +235,8 @@
                         src="./img/flag-of-italy.svg"
                         alt="Прапор Італії"
                         class="country-flag"
-                      /><span>Італія</span>
+                      />
+                      <span>Італія</span>
                     </div>
                   </li>
                   <li class="country-item">
@@ -205,7 +245,8 @@
                         src="./img/flag-of-german.svg"
                         alt="Прапор Німеччини"
                         class="country-flag"
-                      /><span>Німеччина</span>
+                      />
+                      <span>Німеччина</span>
                     </div>
                   </li>
                   <li class="country-item">
@@ -214,7 +255,8 @@
                         src="./img/netherlands-flag.svg"
                         alt="Прапор Нідерландів"
                         class="country-flag"
-                      /><span>Нідерланди</span>
+                      />
+                      <span>Нідерланди</span>
                     </div>
                   </li>
                   <li class="country-item">
@@ -223,57 +265,76 @@
                         src="./img/spain-flag.svg"
                         alt="Прапор Іспанії"
                         class="country-flag"
-                      /><span>Іспанія</span>
+                      />
+                      <span>Іспанія</span>
                     </div>
                   </li>
                   <li class="all-country">
                     <a href="#" class="all-countries-link">
                       Усі країни
-                      <span class="dropdown-arrow"></span>
+                      <span class="dropdown-arrow" aria-hidden="true"></span>
                     </a>
                   </li>
                 </ul>
                 <div class="countries-separator"></div>
-              </div>
-              <div class="calendar-block">
+              </section>
+
+              <section class="calendar-block" aria-label="Календар поїздок">
                 <h2 class="calendar-title">Календар поїздок</h2>
+
                 <div class="calendar-card">
                   <button class="calendar-buy-btn" type="button">
                     <span class="calendar-buy-plus">+</span>
                     Купити квиток
                   </button>
+
                   <div class="calendar-header-custom">
                     <p id="calendar-title" class="calendar-title-custom">...</p>
                     <div class="calendar-arrows">
-                      <button id="calendar-prev" class="calendar-arrow">
+                      <button
+                        id="calendar-prev"
+                        class="calendar-arrow"
+                        type="button"
+                        aria-label="Попередній місяць"
+                      >
                         <img
                           src="./img/chevron.svg"
                           class="chevron chevron-left"
                           alt=""
+                          aria-hidden="true"
                         />
                       </button>
-                      <button id="calendar-next" class="calendar-arrow">
+                      <button
+                        id="calendar-next"
+                        class="calendar-arrow"
+                        type="button"
+                        aria-label="Наступний місяць"
+                      >
                         <img
                           src="./img/chevron.svg"
                           class="chevron chevron-right"
                           alt=""
+                          aria-hidden="true"
                         />
                       </button>
                     </div>
                   </div>
+
                   <div id="trip-calendar"></div>
                 </div>
-              </div>
-            </div>
+              </section>
+            </aside>
           </div>
         </div>
       </section>
+
       <section id="drivers" class="drivers">
         <div class="container">
           <div class="drivers-header">
             <h2>Наші водії</h2>
             <a href="#" class="all-drivers-link">Усі водії (7)</a>
           </div>
+
           <ul class="drivers-list">
             <li>
               <article class="driver-card">
@@ -287,11 +348,11 @@
                 <div class="driver-socials">
                   <img
                     src="./img/small-instagram-icon.svg"
-                    alt="Маленька іконка instagram"
+                    alt="Маленька іконка Instagram"
                   />
                   <img
                     src="./img/small-linkedIn-icon.svg"
-                    alt="Маленька іконка linkedIn"
+                    alt="Маленька іконка LinkedIn"
                   />
                 </div>
               </article>
@@ -308,11 +369,11 @@
                 <div class="driver-socials">
                   <img
                     src="./img/small-instagram-icon.svg"
-                    alt="Маленька іконка instagram"
+                    alt="Маленька іконка Instagram"
                   />
                   <img
                     src="./img/small-linkedIn-icon.svg"
-                    alt="Маленька іконка linkedIn"
+                    alt="Маленька іконка LinkedIn"
                   />
                 </div>
               </article>
@@ -329,11 +390,11 @@
                 <div class="driver-socials">
                   <img
                     src="./img/small-instagram-icon.svg"
-                    alt="Маленька іконка instagram"
+                    alt="Маленька іконка Instagram"
                   />
                   <img
                     src="./img/small-linkedIn-icon.svg"
-                    alt="Маленька іконка linkedIn"
+                    alt="Маленька іконка LinkedIn"
                   />
                 </div>
               </article>
@@ -350,11 +411,11 @@
                 <div class="driver-socials">
                   <img
                     src="./img/small-instagram-icon.svg"
-                    alt="Маленька іконка instagram"
+                    alt="Маленька іконка Instagram"
                   />
                   <img
                     src="./img/small-linkedIn-icon.svg"
-                    alt="Маленька іконка linkedIn"
+                    alt="Маленька іконка LinkedIn"
                   />
                 </div>
               </article>
@@ -371,11 +432,11 @@
                 <div class="driver-socials">
                   <img
                     src="./img/small-instagram-icon.svg"
-                    alt="Маленька іконка instagram"
+                    alt="Маленька іконка Instagram"
                   />
                   <img
                     src="./img/small-linkedIn-icon.svg"
-                    alt="Маленька іконка linkedIn"
+                    alt="Маленька іконка LinkedIn"
                   />
                 </div>
               </article>
@@ -383,11 +444,14 @@
           </ul>
         </div>
       </section>
-      <div class="drivers-separator"></div>
+
+      <div class="drivers-separator" aria-hidden="true"></div>
+
       <section id="service" class="service">
         <div class="container">
           <h2 class="service-title">Сервіс</h2>
           <p class="service-subtitle">Найкращі умови для вашого комфорту</p>
+
           <ul class="service-list">
             <li>
               <article class="service-item">
@@ -397,7 +461,7 @@
             </li>
             <li>
               <article class="service-item">
-                <img src="./img/wifi.svg" alt="Вайфай" />
+                <img src="./img/wifi.svg" alt="Wi-Fi" />
                 <h4 class="no-wrap-text">Wi-Fi</h4>
               </article>
             </li>
@@ -428,6 +492,7 @@
           </ul>
         </div>
       </section>
+
       <section id="reviews" class="reviews">
         <div class="container reviews-content">
           <div class="reviews-header">
@@ -440,6 +505,7 @@
             </p>
             <button class="review-button" type="button">Залишити відгук</button>
           </div>
+
           <div class="review-right">
             <ul class="reviews-list">
               <li>
@@ -452,7 +518,7 @@
                     />
                     <div class="review-info">
                       <h3 class="review-name">Ben Yardley</h3>
-                      <p class="location">Київ - Кишинів</p>
+                      <p class="location">Київ — Кишинів</p>
                       <p class="date-color">1 May 2023</p>
                     </div>
                   </div>
@@ -462,7 +528,7 @@
                     aliqua. Ut enim ad minim veniam, quis nostrud exercitation
                     ullamco laboris nisi ut aliquip ex ea commodo consequat.
                   </p>
-                  <div class="review-rating">
+                  <div class="review-rating" aria-label="Оцінка 5 зірок">
                     <span class="star-icon"></span>
                     <span class="star-icon"></span>
                     <span class="star-icon"></span>
@@ -471,6 +537,7 @@
                   </div>
                 </article>
               </li>
+
               <li>
                 <article class="review-card">
                   <div class="review-top">
@@ -481,7 +548,7 @@
                     />
                     <div class="review-info">
                       <h3 class="review-name">Craig Martin</h3>
-                      <p class="location">Львів - Париж</p>
+                      <p class="location">Львів — Париж</p>
                       <p class="date-color">1 May 2023</p>
                     </div>
                   </div>
@@ -493,7 +560,7 @@
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
                     do eiusmod tempor.
                   </p>
-                  <div class="review-rating">
+                  <div class="review-rating" aria-label="Оцінка 5 зірок">
                     <span class="star-icon"></span>
                     <span class="star-icon"></span>
                     <span class="star-icon"></span>
@@ -503,7 +570,8 @@
                 </article>
               </li>
             </ul>
-            <div class="reviews-pagination">
+
+            <div class="reviews-pagination" aria-hidden="true">
               <span class="pagination-dot active"></span>
               <span class="pagination-dot"></span>
               <span class="pagination-dot"></span>
@@ -515,14 +583,16 @@
         </div>
       </section>
     </main>
+
     <footer id="contacts">
       <div class="container footer-top">
         <div class="footer-about">
-          <img src="./img/logo-below.svg" alt="Логотип" />
+          <img src="./img/logo-below.svg" alt="Логотип Sprinters" />
           <p class="search-platform-color">
             Платформа пошуку перевізників та бронювання поїздок
           </p>
         </div>
+
         <div class="footer-links">
           <h5 class="feedback-color">Клієнтам</h5>
           <ul>
@@ -535,8 +605,9 @@
             </li>
           </ul>
         </div>
+
         <div class="footer-carriers">
-          <nav>
+          <nav aria-label="Меню для перевізників">
             <h5 class="feedback-color">Перевізникам</h5>
             <ul>
               <li><a class="footer-links-color" href="#">Help Docs</a></li>
@@ -550,11 +621,12 @@
             </ul>
           </nav>
         </div>
+
         <div class="footer-contact">
           <h5 class="feedback-color">Зворотній зв’язок</h5>
           <p class="footer-call-color">
             Маєш пропозиції щодо покращення<br />
-            сервісу - пиши нам!
+            сервісу — пиши нам!
           </p>
           <form>
             <input type="email" name="email" placeholder="Email Address" />
@@ -563,50 +635,53 @@
           <address>
             <ul>
               <li>
-                <a class="social-links-grey" href="tel:+380735555555"
-                  ><img src="./img/phone.svg" alt="номер телефону" />+ 38
-                  (073)555 55 55</a
-                >
+                <a class="social-links-grey" href="tel:+380735555555">
+                  <img src="./img/phone.svg" alt="Номер телефону" />+ 38
+                  (073)555 55 55
+                </a>
               </li>
               <li>
                 <a
                   class="social-links-grey"
                   href="mailto:gmail@gmail.com"
                   target="_blank"
-                  ><img src="./img/mail.svg" alt="gmail" />gmail@gmail.com</a
+                  rel="noopener"
                 >
+                  <img src="./img/mail.svg" alt="Email" />gmail@gmail.com
+                </a>
               </li>
             </ul>
           </address>
         </div>
       </div>
+
       <div class="footer-bottom">
         <div class="container footer-bottom-inner">
           <p class="rights">2024 © Sprinters. All rights reserved.</p>
-          <nav class="footer-socials">
+          <nav class="footer-socials" aria-label="Соціальні мережі">
             <ul>
               <li>
-                <a href="#" target="_blank"
+                <a href="#" target="_blank" rel="noopener"
                   ><img src="./img/facebook.svg" alt="Facebook"
                 /></a>
               </li>
               <li>
-                <a href="#" target="_blank"
+                <a href="#" target="_blank" rel="noopener"
                   ><img src="./img/instagram.svg" alt="Instagram"
                 /></a>
               </li>
               <li>
-                <a href="#" target="_blank"
+                <a href="#" target="_blank" rel="noopener"
                   ><img src="./img/dribbble.svg" alt="Dribbble"
                 /></a>
               </li>
               <li>
-                <a href="#" target="_blank"
+                <a href="#" target="_blank" rel="noopener"
                   ><img src="./img/linkedIn.svg" alt="LinkedIn"
                 /></a>
               </li>
               <li>
-                <a href="#" target="_blank"
+                <a href="#" target="_blank" rel="noopener"
                   ><img src="./img/twitter.svg" alt="Twitter"
                 /></a>
               </li>
@@ -615,9 +690,11 @@
         </div>
       </div>
     </footer>
+
     <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
     <script>
       document.addEventListener('DOMContentLoaded', function () {
+        /* FLATPICKR */
         const calendarTitle = document.getElementById('calendar-title');
         const btnPrev = document.getElementById('calendar-prev');
         const btnNext = document.getElementById('calendar-next');
@@ -627,7 +704,6 @@
           locale: 'en',
           defaultDate: 'today',
           minDate: 'today',
-
           onReady: function (selectedDates, dateStr, instance) {
             updateTitle(instance);
           },
@@ -640,7 +716,7 @@
           const m = instance.currentMonth;
           const y = instance.currentYear;
           const monthName = instance.l10n.months.longhand[m];
-          calendarTitle.textContent = `${monthName} ${y}`;
+          calendarTitle.textContent = monthName + ' ' + y;
         }
 
         btnPrev.addEventListener('click', () => {
@@ -650,6 +726,28 @@
         btnNext.addEventListener('click', () => {
           fp.changeMonth(1);
         });
+
+        /* BURGER MENU */
+        const burger = document.querySelector('.burger');
+        const navInner = document.querySelector('.header-nav-inner');
+
+        if (burger && navInner) {
+          burger.addEventListener('click', () => {
+            const isOpen = burger.classList.toggle('is-open');
+            navInner.classList.toggle('is-open');
+            document.body.classList.toggle('menu-open', isOpen);
+            burger.setAttribute('aria-expanded', String(isOpen));
+          });
+
+          navInner.addEventListener('click', (event) => {
+            if (event.target.closest('a')) {
+              burger.classList.remove('is-open');
+              navInner.classList.remove('is-open');
+              document.body.classList.remove('menu-open');
+              burger.setAttribute('aria-expanded', 'false');
+            }
+          });
+        }
       });
     </script>
   </body>
