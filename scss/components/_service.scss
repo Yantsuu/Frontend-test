@@ -1,0 +1,48 @@
+.service {
+  margin-top: 60px;
+  margin-bottom: 82px;
+
+  &__title {
+    font-family: Lato, sans-serif;
+    font-size: 32px;
+    font-weight: 800;
+    margin-bottom: 8px;
+  }
+
+  &__subtitle {
+    font-size: 16px;
+    color: #7c8493;
+    margin-bottom: 24px;
+  }
+
+  &__list {
+    display: flex;
+    gap: 32px;
+    align-items: center;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  &__item {
+    list-style: none;
+  }
+
+  &__inner {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  &__icon {
+    width: 48px;
+    height: 48px;
+  }
+
+  &__text {
+    font-size: 24px;
+    font-weight: 700;
+    font-family: Rubik, sans-serif;
+    color: #25324b;
+  }
+}

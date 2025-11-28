@@ -1,0 +1,25 @@
+.footer {
+  background-color: #202430;
+  padding-top: 64px;
+  color: white;
+
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    gap: 50px;
+    padding-bottom: 64px;
+  }
+
+  &__bottom {
+    padding-top: 40px;
+  }
+
+  &__bottom-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    padding-top: 40px;
+  }
+}

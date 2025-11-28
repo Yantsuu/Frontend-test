@@ -1,0 +1,44 @@
+.driver-card {
+  padding: 16px;
+  border: 1px solid #d6ddeb;
+  border-radius: 8px;
+  text-align: center;
+  background: #fff;
+
+  &__avatar {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-bottom: 12px;
+  }
+
+  &__name {
+    font-size: 18px;
+    font-weight: 700;
+    font-family: Rubik, sans-serif;
+    margin: 8px 0;
+  }
+
+  &__exp {
+    font-size: 14px;
+    color: #7c8493;
+    font-family: Rubik, sans-serif;
+    margin: 0 0 12px;
+  }
+
+  &__socials {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  &__social {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+}

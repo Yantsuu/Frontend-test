@@ -1,0 +1,14 @@
+.breadcrumbs {
+  color: #7c8493;
+  margin: 0 0 12px;
+
+  &__link {
+    color: #7c8493;
+    text-decoration: none;
+    transition: color 0.3s;
+
+    &:hover {
+      color: var(--color-brand);
+    }
+  }
+}

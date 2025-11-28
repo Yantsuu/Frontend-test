@@ -1,0 +1,124 @@
+.reviews {
+  padding-top: 72px;
+  padding-bottom: 40px;
+  background-color: #f8f8fc;
+
+  &__inner {
+    display: flex;
+    align-items: flex-start;
+    gap: 32px;
+  }
+
+  &__sidebar {
+    width: 422px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__title {
+    font-family: Lato, sans-serif;
+    font-size: 48px;
+    font-weight: 700;
+    margin-bottom: 22px;
+    white-space: nowrap;
+  }
+
+  &__accent {
+    color: #26a4ff;
+  }
+
+  &__description {
+    margin: 0 0 42px;
+  }
+
+  &__button {
+    background-color: var(--color-brand);
+    color: #fff;
+    border-radius: 6px;
+    border: none;
+    width: 200px;
+    height: 51px;
+    font-weight: 700;
+    cursor: pointer;
+  }
+
+  &__slider {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 2px;
+    flex: 0 0 736px;
+    margin-left: auto;
+  }
+
+  &__list {
+    display: flex;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    flex-wrap: nowrap;
+  }
+
+  &__item {
+    list-style: none;
+    width: 352px;
+    flex-shrink: 0;
+  }
+
+  &__nav {
+    margin-top: 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+  }
+
+  &__arrow {
+    width: 32px;
+    height: 32px;
+    padding: 0;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__arrow::before {
+    content: '';
+    width: 12px;
+    height: 12px;
+    display: block;
+
+    border-right: 2px solid var(--color-brand);
+    border-bottom: 2px solid var(--color-brand);
+    transform: rotate(135deg);
+  }
+
+  &__arrow--next::before {
+    transform: rotate(-45deg);
+  }
+
+  &__pagination {
+    display: flex !important;
+    width: auto !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    gap: 12px;
+    align-items: center;
+  }
+
+  .swiper-pagination-bullet {
+    width: 10px;
+    height: 10px;
+    background: #d6ddeb;
+    opacity: 1;
+    border-radius: 50%;
+  }
+
+  .swiper-pagination-bullet-active {
+    background: var(--color-brand);
+  }
+}

@@ -1,0 +1,29 @@
+.footer {
+  &__bottom-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__rights {
+    color: #a8adb7;
+    font-size: 15px;
+    margin: 0;
+  }
+
+  &__socials-list {
+    display: flex;
+    gap: 24px;
+  }
+
+  &__socials-item img {
+    width: 32px;
+    height: 32px;
+    opacity: 0.8;
+    transition: 0.2s;
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+}

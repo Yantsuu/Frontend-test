@@ -22,360 +22,437 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css"
     />
-    <link rel="stylesheet" href="./css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="./css/main.css" />
   </head>
   <body>
-    <header id="top">
+    <header class="header" id="top">
       <div class="container">
-        <nav class="header-nav">
-          <a href="index.html">
+        <nav class="header__nav">
+          <a class="header__logo" href="index.html">
             <img src="./img/logo.svg" alt="Логотип" />
           </a>
-          <ul class="header-menu">
-            <li><a class="header-links" href="#top">Головна</a></li>
-            <li><a class="header-links" href="#drivers">Перевізникам</a></li>
-            <li><a class="header-links" href="#about">Про нас</a></li>
-            <li>
-              <a class="header-links" href="#profile">Профіль перевізника</a>
+
+          <ul class="header__menu">
+            <li class="header__menu-item">
+              <a class="header__link" href="#top">Головна</a>
+            </li>
+            <li class="header__menu-item">
+              <a class="header__link" href="#drivers">Перевізникам</a>
+            </li>
+            <li class="header__menu-item">
+              <a class="header__link" href="#about">Про нас</a>
+            </li>
+            <li class="header__menu-item">
+              <a class="header__link" href="#profile">Профіль перевізника</a>
             </li>
           </ul>
-          <div class="header-buttons">
-            <button class="create-profile-button" type="button">
+
+          <div class="header__actions">
+            <button class="header__btn header__btn--outline">
               Створити профіль
             </button>
-            <span class="header-divider"></span>
-            <button class="enter-button" type="button">Увійти</button>
+            <span class="header__divider"></span>
+            <button class="header__btn header__btn--filled">Увійти</button>
           </div>
         </nav>
       </div>
-      <div id="profile" class="profile-header">
+      <section class="profile-header" id="profile">
         <div class="container">
           <p class="breadcrumbs">
-            <a href="#top" class="crumb-link">Головна</a> /
-            <a href="#profile" class="crumb-link">Профіль перевізника</a> /
-            <a href="#top" class="crumb-link">Stripe</a>
+            <a class="breadcrumbs__link" href="#top">Головна</a> /
+            <a class="breadcrumbs__link" href="#profile">Профіль перевізника</a>
+            /
+            <a class="breadcrumbs__link" href="#top">Stripe</a>
           </p>
-          <div class="profile-top">
+
+          <div class="profile">
             <img
               src="./img/main-logo.svg"
-              alt="Головне лого"
-              class="company-logo"
+              alt="Компанія"
+              class="profile__logo"
             />
-            <div class="profile-main">
-              <div class="title-row">
-                <h1 class="stripe">Stripe</h1>
-                <span class="trips-tag">43 Поїздок</span>
+
+            <div class="profile__main">
+              <div class="profile__title-row">
+                <h1 class="profile__title">Stripe</h1>
+                <span class="profile__tag">43 Поїздок</span>
               </div>
 
-              <div class="contact-row">
+              <div class="profile__contacts">
                 <a
-                  class="social-links-header"
+                  class="profile__contact-link"
                   href="https://stripe.com"
                   target="_blank"
                 >
                   <img src="./img/site-icon.svg" alt="" />https://stripe.com
                 </a>
-                <a class="social-links-header" href="tel:+380735555555">
+
+                <a class="profile__contact-link" href="tel:+380735555555">
                   <img src="./img/phone-icon.svg" alt="" />+38 (073) 555 55 55
                 </a>
               </div>
-              <div class="stats-row">
-                <div class="stat-item">
+
+              <div class="profile__stats">
+                <div class="profile__stat">
                   <img src="./img/fire.svg" alt="" />
-                  <div>
-                    <p class="stat-label">На ринку від:</p>
-                    <p class="stat-value">Травень 31, 2011</p>
+                  <div class="profile__stat-text">
+                    <p class="profile__stat-label">На ринку від:</p>
+                    <p class="profile__stat-value">Травень 31, 2011</p>
                   </div>
                 </div>
-                <div class="stat-item">
+
+                <div class="profile__stat">
                   <img src="./img/people.svg" alt="" />
-                  <div>
-                    <p class="stat-label">Перевезених пасажирів</p>
-                    <p class="stat-value">4000+</p>
+                  <div class="profile__stat-text">
+                    <p class="profile__stat-label">Перевезених пасажирів</p>
+                    <p class="profile__stat-value">4000+</p>
                   </div>
                 </div>
-                <div class="stat-item">
+
+                <div class="profile__stat">
                   <img src="./img/bus.svg" alt="" />
-                  <div>
-                    <p class="stat-label">Автопарк</p>
-                    <p class="stat-value">8 бусів</p>
+                  <div class="profile__stat-text">
+                    <p class="profile__stat-label">Автопарк</p>
+                    <p class="profile__stat-value">8 бусів</p>
                   </div>
                 </div>
-                <div class="stat-item">
+
+                <div class="profile__stat">
                   <img src="./img/global.svg" alt="" />
-                  <div>
-                    <p class="stat-label">Обслуговуємо</p>
-                    <p class="stat-value">8 країн</p>
+                  <div class="profile__stat-text">
+                    <p class="profile__stat-label">Обслуговуємо</p>
+                    <p class="profile__stat-value">8 країн</p>
                   </div>
                 </div>
-                <div class="stat-item">
+
+                <div class="profile__stat">
                   <img src="./img/city.svg" alt="" />
-                  <div>
-                    <p class="stat-label">Місто</p>
-                    <p class="stat-value">Львів</p>
+                  <div class="profile__stat-text">
+                    <p class="profile__stat-label">Місто</p>
+                    <p class="profile__stat-value">Львів</p>
                   </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </header>
-    <main>
-      <section id="about" class="description">
-        <div class="container">
-          <div class="main-content-grid">
-            <div class="main-left-column">
-              <div class="description-text">
-                <h2 class="description-carrier">Опис перевізника</h2>
-                <p class="description-carrier-text" lang="en">
-                  Stripe is a software platform for starting and running
-                  internet businesses. Millions of businesses rely on Stripe’s
-                  software tools to accept payments, expand globally, and manage
-                  their businesses online. Stripe has been at the forefront of
-                  expanding internet commerce, powering new business models, and
-                  supporting the latest platforms, from marketplaces to mobile
-                  commerce sites. We believe that growing the GDP of the
-                  internet is a problem rooted in code and design, not finance.
-                  Stripe is built for developers, makers, and creators. We work
-                  on solving the hard technical problems necessary to build
-                  global economic infrastructure—from designing highly reliable
-                  systems to developing advanced machine learning algorithms to
-                  prevent fraud.
-                </p>
-              </div>
-              <div class="socials">
-                <h2 class="on-social">Ми у соц. мережах</h2>
-                <ul>
-                  <li>
-                    <a
-                      class="social-links-main"
-                      href="https://twitter.com/stripe"
-                      target="_blank"
-                      ><img
-                        src="./img/icon-twitter.svg"
-                        alt="Іконка Твітера"
-                      />twitter.com/stripe</a
-                    >
-                  </li>
-                  <li>
-                    <a
-                      class="social-links-main"
-                      href="https://facebook.com"
-                      target="_blank"
-                      ><img
-                        src="./img/icon-facebook.svg"
-                        alt="Іконка Фейсбуку"
-                      />facebook.com/StripeHQ</a
-                    >
-                  </li>
-                </ul>
-                <div class="gallery-truck">
-                  <img src="./img/photo-truck-one.jpg" alt="Фото грузовика" />
-                  <img src="./img/photo-truck-two.jpg" alt="Фото грузовика" />
-                  <img src="./img/photo-truck-three.jpg" alt="Фото грузовика" />
-                </div>
-              </div>
-            </div>
-            <div class="main-right-column">
-              <div class="countries-block">
-                <h2 class="serve-countries">Обслуговуємо країни</h2>
-                <ul>
-                  <li class="country-item">
-                    <div class="country-inner">
-                      <img
-                        src="./img/flag-of-france.svg"
-                        alt="Прапор Франції"
-                        class="country-flag"
-                      /><span>Франція</span>
-                    </div>
-                  </li>
-                  <li class="country-item">
-                    <div class="country-inner">
-                      <img
-                        src="./img/flag-of-italy.svg"
-                        alt="Прапор Італії"
-                        class="country-flag"
-                      /><span>Італія</span>
-                    </div>
-                  </li>
-                  <li class="country-item">
-                    <div class="country-inner">
-                      <img
-                        src="./img/flag-of-german.svg"
-                        alt="Прапор Німеччини"
-                        class="country-flag"
-                      /><span>Німеччина</span>
-                    </div>
-                  </li>
-                  <li class="country-item">
-                    <div class="country-inner">
-                      <img
-                        src="./img/netherlands-flag.svg"
-                        alt="Прапор Нідерландів"
-                        class="country-flag"
-                      /><span>Нідерланди</span>
-                    </div>
-                  </li>
-                  <li class="country-item">
-                    <div class="country-inner">
-                      <img
-                        src="./img/spain-flag.svg"
-                        alt="Прапор Іспанії"
-                        class="country-flag"
-                      /><span>Іспанія</span>
-                    </div>
-                  </li>
-                  <li class="all-country">
-                    <a href="#" class="all-countries-link">
-                      Усі країни
-                      <span class="dropdown-arrow"></span>
-                    </a>
-                  </li>
-                </ul>
-                <div class="countries-separator"></div>
-              </div>
-              <div class="calendar-block">
-                <h2 class="calendar-title">Календар поїздок</h2>
-                <div class="calendar-card">
-                  <button class="calendar-buy-btn" type="button">
-                    <span class="calendar-buy-plus">+</span>
-                    Купити квиток
-                  </button>
-                  <div class="calendar-header-custom">
-                    <p id="calendar-title" class="calendar-title-custom">...</p>
-                    <div class="calendar-arrows">
-                      <button id="calendar-prev" class="calendar-arrow">
-                        <img
-                          src="./img/chevron.svg"
-                          class="chevron chevron-left"
-                          alt=""
-                        />
-                      </button>
-                      <button id="calendar-next" class="calendar-arrow">
-                        <img
-                          src="./img/chevron.svg"
-                          class="chevron chevron-right"
-                          alt=""
-                        />
-                      </button>
-                    </div>
-                  </div>
-                  <div id="trip-calendar"></div>
                 </div>
               </div>
             </div>
           </div>
         </div>
       </section>
+    </header>
+
+    <main>
+      <section class="description" id="about">
+        <div class="container description__container">
+          <div class="description__left">
+            <div class="description__text-block">
+              <h2 class="description__title">Опис перевізника</h2>
+
+              <p class="description__text" lang="en">
+                Stripe is a software platform for starting and running internet
+                businesses. Millions of businesses rely on Stripe’s software
+                tools to accept payments, expand globally, and manage their
+                businesses online. Stripe has been at the forefront of expanding
+                internet commerce, powering new business models, and supporting
+                the latest platforms, from marketplaces to mobile commerce
+                sites. We believe that growing the GDP of the internet is a
+                problem rooted in code and design, not finance. Stripe is built
+                for developers, makers, and creators. We work on solving the
+                hard technical problems necessary to build global economic
+                infrastructure—from designing highly reliable systems to
+                developing advanced machine learning algorithms to prevent
+                fraud.
+              </p>
+            </div>
+
+            <div class="description__socials">
+              <h2 class="description__socials-title">Ми у соц. мережах</h2>
+
+              <ul class="description__social-list">
+                <li class="description__social-item">
+                  <a
+                    href="https://twitter.com/stripe"
+                    class="description__social-link"
+                    target="_blank"
+                  >
+                    <img
+                      src="./img/icon-twitter.svg"
+                      alt=""
+                    />twitter.com/stripe
+                  </a>
+                </li>
+
+                <li class="description__social-item">
+                  <a
+                    href="https://facebook.com"
+                    class="description__social-link"
+                    target="_blank"
+                  >
+                    <img
+                      src="./img/icon-facebook.svg"
+                      alt=""
+                    />facebook.com/StripeHQ
+                  </a>
+                </li>
+              </ul>
+
+              <div class="description__gallery">
+                <img
+                  src="./img/photo-truck-one.jpg"
+                  alt="Фото 1"
+                  class="description__gallery-img"
+                />
+                <img
+                  src="./img/photo-truck-two.jpg"
+                  alt="Фото 2"
+                  class="description__gallery-img"
+                />
+                <img
+                  src="./img/photo-truck-three.jpg"
+                  alt="Фото 3"
+                  class="description__gallery-img"
+                />
+              </div>
+            </div>
+          </div>
+
+          <div class="description__right">
+            <div class="countries">
+              <h2 class="countries__title">Обслуговуємо країни</h2>
+
+              <ul class="countries__list">
+                <li class="countries__item">
+                  <div class="countries__inner">
+                    <img
+                      src="./img/flag-of-france.svg"
+                      alt="Франція"
+                      class="countries__flag"
+                    />
+                    <span class="countries__name">Франція</span>
+                  </div>
+                </li>
+
+                <li class="countries__item">
+                  <div class="countries__inner">
+                    <img
+                      src="./img/flag-of-italy.svg"
+                      alt="Італія"
+                      class="countries__flag"
+                    />
+                    <span class="countries__name">Італія</span>
+                  </div>
+                </li>
+
+                <li class="countries__item">
+                  <div class="countries__inner">
+                    <img
+                      src="./img/flag-of-german.svg"
+                      alt="Німеччина"
+                      class="countries__flag"
+                    />
+                    <span class="countries__name">Німеччина</span>
+                  </div>
+                </li>
+
+                <li class="countries__item">
+                  <div class="countries__inner">
+                    <img
+                      src="./img/netherlands-flag.svg"
+                      alt="Нідерланди"
+                      class="countries__flag"
+                    />
+                    <span class="countries__name">Нідерланди</span>
+                  </div>
+                </li>
+
+                <li class="countries__item">
+                  <div class="countries__inner">
+                    <img
+                      src="./img/spain-flag.svg"
+                      alt="Іспанія"
+                      class="countries__flag"
+                    />
+                    <span class="countries__name">Іспанія</span>
+                  </div>
+                </li>
+
+                <!-- кнопка "усі країни" -->
+                <li class="countries__item countries__item--all">
+                  <a href="#" class="countries__all-link">
+                    Усі країни
+                    <span class="countries__arrow"></span>
+                  </a>
+                </li>
+              </ul>
+
+              <div class="countries__divider"></div>
+            </div>
+            <div class="calendar">
+              <h2 class="calendar__title">Календар поїздок</h2>
+
+              <div class="calendar__card">
+                <button class="calendar__buy-btn" type="button">
+                  <span class="calendar__plus">+</span>
+                  Купити квиток
+                </button>
+
+                <div class="calendar__header">
+                  <p id="calendar-title" class="calendar__month">...</p>
+
+                  <div class="calendar__controls">
+                    <button
+                      id="calendar-prev"
+                      class="calendar__arrow calendar__arrow--prev"
+                    >
+                      <img src="./img/chevron.svg" alt="" />
+                    </button>
+
+                    <button
+                      id="calendar-next"
+                      class="calendar__arrow calendar__arrow--next"
+                    >
+                      <img src="./img/chevron.svg" alt="" />
+                    </button>
+                  </div>
+                </div>
+
+                <div id="trip-calendar" class="calendar__flatpickr"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section id="drivers" class="drivers">
         <div class="container">
-          <div class="drivers-header">
-            <h2>Наші водії</h2>
-            <a href="#" class="all-drivers-link">Усі водії (7)</a>
+          <div class="drivers__header">
+            <h2 class="drivers__title">Наші водії</h2>
+            <a href="#" class="drivers__all-link">Усі водії (7)</a>
           </div>
-          <ul class="drivers-list">
-            <li>
+
+          <ul class="drivers__list">
+            <li class="drivers__item">
               <article class="driver-card">
                 <img
                   src="./img/avatar-olexansder.svg"
                   alt="Фото Олександра"
-                  class="driver-avatar"
+                  class="driver-card__avatar"
                 />
-                <h4 class="name-driver">Олександр</h4>
-                <p class="work-experience">Досвід роботи: 5 років</p>
-                <div class="driver-socials">
+                <h4 class="driver-card__name">Олександр</h4>
+                <p class="driver-card__exp">Досвід роботи: 5 років</p>
+
+                <div class="driver-card__socials">
                   <img
                     src="./img/small-instagram-icon.svg"
-                    alt="Маленька іконка instagram"
+                    alt="Instagram"
+                    class="driver-card__social"
                   />
                   <img
                     src="./img/small-linkedIn-icon.svg"
-                    alt="Маленька іконка linkedIn"
+                    alt="LinkedIn"
+                    class="driver-card__social"
                   />
                 </div>
               </article>
             </li>
-            <li>
+
+            <li class="drivers__item">
               <article class="driver-card">
                 <img
                   src="./img/avatar-volodymir.svg"
                   alt="Фото Володимира"
-                  class="driver-avatar"
+                  class="driver-card__avatar"
                 />
-                <h4 class="name-driver">Володимир</h4>
-                <p class="work-experience">Досвід роботи: 7 років</p>
-                <div class="driver-socials">
+                <h4 class="driver-card__name">Володимир</h4>
+                <p class="driver-card__exp">Досвід роботи: 7 років</p>
+
+                <div class="driver-card__socials">
                   <img
                     src="./img/small-instagram-icon.svg"
-                    alt="Маленька іконка instagram"
+                    alt="Instagram"
+                    class="driver-card__social"
                   />
                   <img
                     src="./img/small-linkedIn-icon.svg"
-                    alt="Маленька іконка linkedIn"
+                    alt="LinkedIn"
+                    class="driver-card__social"
                   />
                 </div>
               </article>
             </li>
-            <li>
+
+            <li class="drivers__item">
               <article class="driver-card">
                 <img
                   src="./img/avatar-irynaa.svg"
                   alt="Фото Ірини"
-                  class="driver-avatar"
+                  class="driver-card__avatar"
                 />
-                <h4 class="name-driver">Ірина</h4>
-                <p class="work-experience">Досвід роботи: 1 рік</p>
-                <div class="driver-socials">
+                <h4 class="driver-card__name">Ірина</h4>
+                <p class="driver-card__exp">Досвід роботи: 1 рік</p>
+
+                <div class="driver-card__socials">
                   <img
                     src="./img/small-instagram-icon.svg"
-                    alt="Маленька іконка instagram"
+                    alt="Instagram"
+                    class="driver-card__social"
                   />
                   <img
                     src="./img/small-linkedIn-icon.svg"
-                    alt="Маленька іконка linkedIn"
+                    alt="LinkedIn"
+                    class="driver-card__social"
                   />
                 </div>
               </article>
             </li>
-            <li>
+
+            <li class="drivers__item">
               <article class="driver-card">
                 <img
                   src="./img/avatar-mykhailo.svg"
                   alt="Фото Михайла"
-                  class="driver-avatar"
+                  class="driver-card__avatar"
                 />
-                <h4 class="name-driver">Михайло</h4>
-                <p class="work-experience">Досвід роботи: 1 рік</p>
-                <div class="driver-socials">
+                <h4 class="driver-card__name">Михайло</h4>
+                <p class="driver-card__exp">Досвід роботи: 1 рік</p>
+
+                <div class="driver-card__socials">
                   <img
                     src="./img/small-instagram-icon.svg"
-                    alt="Маленька іконка instagram"
+                    alt="Instagram"
+                    class="driver-card__social"
                   />
                   <img
                     src="./img/small-linkedIn-icon.svg"
-                    alt="Маленька іконка linkedIn"
+                    alt="LinkedIn"
+                    class="driver-card__social"
                   />
                 </div>
               </article>
             </li>
-            <li>
+
+            <li class="drivers__item">
               <article class="driver-card">
                 <img
                   src="./img/avatar-yulya.jpg"
                   alt="Фото Юлії"
-                  class="driver-avatar"
+                  class="driver-card__avatar"
                 />
-                <h4 class="name-driver">Юлія</h4>
-                <p class="work-experience">Досвід роботи: 2 роки</p>
-                <div class="driver-socials">
+                <h4 class="driver-card__name">Юлія</h4>
+                <p class="driver-card__exp">Досвід роботи: 2 роки</p>
+
+                <div class="driver-card__socials">
                   <img
                     src="./img/small-instagram-icon.svg"
-                    alt="Маленька іконка instagram"
+                    alt="Instagram"
+                    class="driver-card__social"
                   />
                   <img
                     src="./img/small-linkedIn-icon.svg"
-                    alt="Маленька іконка linkedIn"
+                    alt="LinkedIn"
+                    class="driver-card__social"
                   />
                 </div>
               </article>
@@ -383,109 +460,136 @@
           </ul>
         </div>
       </section>
-      <div class="drivers-separator"></div>
+
+      <div class="divider"></div>
+
       <section id="service" class="service">
         <div class="container">
-          <h2 class="service-title">Сервіс</h2>
-          <p class="service-subtitle">Найкращі умови для вашого комфорту</p>
-          <ul class="service-list">
-            <li>
-              <article class="service-item">
-                <img src="./img/conditioner.svg" alt="Кондиціонер" />
-                <h4>Кондиціонер</h4>
-              </article>
+          <h2 class="service__title">Сервіс</h2>
+          <p class="service__subtitle">Найкращі умови для вашого комфорту</p>
+
+          <ul class="service__list">
+            <li class="service__item">
+              <div class="service__inner">
+                <img src="./img/conditioner.svg" class="service__icon" alt="" />
+                <span class="service__text">Кондиціонер</span>
+              </div>
             </li>
-            <li>
-              <article class="service-item">
-                <img src="./img/wifi.svg" alt="Вайфай" />
-                <h4 class="no-wrap-text">Wi-Fi</h4>
-              </article>
+
+            <li class="service__item">
+              <div class="service__inner">
+                <img src="./img/wifi.svg" class="service__icon" alt="" />
+                <span class="service__text">Wi-Fi</span>
+              </div>
             </li>
-            <li>
-              <article class="service-item">
-                <img src="./img/tv.svg" alt="TV" />
-                <h4>TV</h4>
-              </article>
+
+            <li class="service__item">
+              <div class="service__inner">
+                <img src="./img/tv.svg" class="service__icon" alt="" />
+                <span class="service__text">TV</span>
+              </div>
             </li>
-            <li>
-              <article class="service-item">
-                <img src="./img/wc.svg" alt="Туалет" />
-                <h4>Туалет</h4>
-              </article>
+
+            <li class="service__item">
+              <div class="service__inner">
+                <img src="./img/wc.svg" class="service__icon" alt="" />
+                <span class="service__text">Туалет</span>
+              </div>
             </li>
-            <li>
-              <article class="service-item">
-                <img src="./img/weekend.svg" alt="Зручні сидіння" />
-                <h4>Зручні сидіння</h4>
-              </article>
+
+            <li class="service__item">
+              <div class="service__inner">
+                <img src="./img/weekend.svg" class="service__icon" alt="" />
+                <span class="service__text"
+                  >Зручні <br />
+                  сидіння</span
+                >
+              </div>
             </li>
-            <li>
-              <article class="service-item">
-                <img src="./img/transport.svg" alt="Перевозимо тварин" />
-                <h4>Перевозимо тварин</h4>
-              </article>
+
+            <li class="service__item">
+              <div class="service__inner">
+                <img src="./img/transport.svg" class="service__icon" alt="" />
+                <span class="service__text"
+                  >Перевозимо<br />
+                  тварин</span
+                >
+              </div>
             </li>
           </ul>
         </div>
       </section>
+
       <section id="reviews" class="reviews">
-        <div class="container reviews-content">
-          <div class="reviews-header">
-            <h1>Що <span class="say-people">кажуть люди?</span></h1>
-            <p lang="en">
+        <div class="container reviews__inner">
+          <div class="reviews__sidebar">
+            <h1 class="reviews__title">
+              Що <span class="reviews__accent">кажуть люди?</span>
+            </h1>
+
+            <p class="reviews__description" lang="en">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
               enim ad minim veniam, quis nostrud exercitation ullamco laboris
               nisi ut aliquip ex ea commodo consequat.
             </p>
-            <button class="review-button" type="button">Залишити відгук</button>
+
+            <button class="reviews__button" type="button">
+              Залишити відгук
+            </button>
           </div>
-          <div class="review-right">
-            <ul class="reviews-list">
-              <li>
+          <div class="reviews__slider swiper">
+            <ul class="reviews__list swiper-wrapper">
+              <li class="reviews__item swiper-slide">
                 <article class="review-card">
-                  <div class="review-top">
+                  <div class="review-card__top">
                     <img
                       src="./img/photo-ben-yardley.jpg"
-                      alt="Фото Бена Ярдлі"
-                      class="review-avatar"
+                      alt="Ben Yardley"
+                      class="review-card__avatar"
                     />
-                    <div class="review-info">
-                      <h3 class="review-name">Ben Yardley</h3>
-                      <p class="location">Київ - Кишинів</p>
-                      <p class="date-color">1 May 2023</p>
+
+                    <div class="review-card__info">
+                      <h3 class="review-card__name">Ben Yardley</h3>
+                      <p class="review-card__location">Київ - Кишинів</p>
+                      <p class="review-card__date">1 May 2023</p>
                     </div>
                   </div>
-                  <p class="review-text-font" lang="en">
+
+                  <p class="review-card__text" lang="en">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
                     do eiusmod tempor incididunt ut labore et dolore magna
                     aliqua. Ut enim ad minim veniam, quis nostrud exercitation
                     ullamco laboris nisi ut aliquip ex ea commodo consequat.
                   </p>
-                  <div class="review-rating">
-                    <span class="star-icon"></span>
-                    <span class="star-icon"></span>
-                    <span class="star-icon"></span>
-                    <span class="star-icon"></span>
-                    <span class="star-icon"></span>
+
+                  <div class="review-card__rating">
+                    <span class="review-card__star"></span>
+                    <span class="review-card__star"></span>
+                    <span class="review-card__star"></span>
+                    <span class="review-card__star"></span>
+                    <span class="review-card__star"></span>
                   </div>
                 </article>
               </li>
-              <li>
+
+              <li class="reviews__item swiper-slide">
                 <article class="review-card">
-                  <div class="review-top">
+                  <div class="review-card__top">
                     <img
                       src="./img/photo-craig-martin.jpg"
-                      alt="Фото Крейга Мартіна"
-                      class="review-avatar"
+                      alt="Craig Martin"
+                      class="review-card__avatar"
                     />
-                    <div class="review-info">
-                      <h3 class="review-name">Craig Martin</h3>
-                      <p class="location">Львів - Париж</p>
-                      <p class="date-color">1 May 2023</p>
+
+                    <div class="review-card__info">
+                      <h3 class="review-card__name">Craig Martin</h3>
+                      <p class="review-card__location">Львів - Париж</p>
+                      <p class="review-card__date">1 May 2023</p>
                     </div>
                   </div>
-                  <p class="review-text-font" lang="en">
+
+                  <p class="review-card__text" lang="en">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
                     do eiusmod tempor incididunt ut labore et dolore magna
                     aliqua. Ut enim ad minim veniam, quis nostrud exercitation
@@ -493,119 +597,214 @@
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
                     do eiusmod tempor.
                   </p>
-                  <div class="review-rating">
-                    <span class="star-icon"></span>
-                    <span class="star-icon"></span>
-                    <span class="star-icon"></span>
-                    <span class="star-icon"></span>
-                    <span class="star-icon"></span>
+
+                  <div class="review-card__rating">
+                    <span class="review-card__star"></span>
+                    <span class="review-card__star"></span>
+                    <span class="review-card__star"></span>
+                    <span class="review-card__star"></span>
+                    <span class="review-card__star"></span>
+                  </div>
+                </article>
+              </li>
+              <li class="reviews__item swiper-slide">
+                <article class="review-card">
+                  <div class="review-card__top">
+                    <img
+                      src="./img/photo-ben-yardley.jpg"
+                      alt="Ben Yardley"
+                      class="review-card__avatar"
+                    />
+
+                    <div class="review-card__info">
+                      <h3 class="review-card__name">Ben Yardley</h3>
+                      <p class="review-card__location">Київ - Кишинів</p>
+                      <p class="review-card__date">1 May 2023</p>
+                    </div>
+                  </div>
+
+                  <p class="review-card__text" lang="en">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                    do eiusmod tempor incididunt ut labore et dolore magna
+                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                    ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                  </p>
+
+                  <div class="review-card__rating">
+                    <span class="review-card__star"></span>
+                    <span class="review-card__star"></span>
+                    <span class="review-card__star"></span>
+                    <span class="review-card__star"></span>
+                    <span class="review-card__star"></span>
+                  </div>
+                </article>
+              </li>
+
+              <li class="reviews__item swiper-slide">
+                <article class="review-card">
+                  <div class="review-card__top">
+                    <img
+                      src="./img/photo-craig-martin.jpg"
+                      alt="Craig Martin"
+                      class="review-card__avatar"
+                    />
+
+                    <div class="review-card__info">
+                      <h3 class="review-card__name">Craig Martin</h3>
+                      <p class="review-card__location">Львів - Париж</p>
+                      <p class="review-card__date">1 May 2023</p>
+                    </div>
+                  </div>
+
+                  <p class="review-card__text" lang="en">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                    do eiusmod tempor incididunt ut labore et dolore magna
+                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                    ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                    do eiusmod tempor.
+                  </p>
+
+                  <div class="review-card__rating">
+                    <span class="review-card__star"></span>
+                    <span class="review-card__star"></span>
+                    <span class="review-card__star"></span>
+                    <span class="review-card__star"></span>
+                    <span class="review-card__star"></span>
                   </div>
                 </article>
               </li>
             </ul>
-            <div class="reviews-pagination">
-              <span class="pagination-dot active"></span>
-              <span class="pagination-dot"></span>
-              <span class="pagination-dot"></span>
-              <span class="pagination-dot"></span>
-              <span class="pagination-dot"></span>
-              <span class="pagination-dot"></span>
+            <div class="reviews__nav">
+              <button class="reviews__arrow reviews__arrow--prev"></button>
+              <div class="reviews__pagination"></div>
+              <button class="reviews__arrow reviews__arrow--next"></button>
             </div>
           </div>
         </div>
       </section>
     </main>
-    <footer id="contacts">
-      <div class="container footer-top">
-        <div class="footer-about">
-          <img src="./img/logo-below.svg" alt="Логотип" />
-          <p class="search-platform-color">
+
+    <footer id="contacts" class="footer">
+      <div class="container footer__top">
+        <div class="footer__about">
+          <img
+            src="./img/logo-below.svg"
+            alt="Логотип"
+            class="footer__about-logo"
+          />
+          <p class="footer__about-text">
             Платформа пошуку перевізників та бронювання поїздок
           </p>
         </div>
-        <div class="footer-links">
-          <h5 class="feedback-color">Клієнтам</h5>
-          <ul>
-            <li><a class="footer-links-color" href="#top">Головна</a></li>
-            <li><a class="footer-links-color" href="#about">Про нас</a></li>
-            <li><a class="footer-links-color" href="#">Ціни</a></li>
-            <li><a class="footer-links-color" href="#">Маршрути</a></li>
-            <li>
-              <a class="footer-links-color" href="#">Політика приватності</a>
+
+        <div class="footer__links">
+          <h5 class="footer__links-title">Клієнтам</h5>
+
+          <ul class="footer__links-list">
+            <li class="footer__links-item">
+              <a class="footer__links-link" href="#top">Головна</a>
+            </li>
+            <li class="footer__links-item">
+              <a class="footer__links-link" href="#about">Про нас</a>
+            </li>
+            <li class="footer__links-item">
+              <a class="footer__links-link" href="#">Ціни</a>
+            </li>
+            <li class="footer__links-item">
+              <a class="footer__links-link" href="#">Маршрути</a>
+            </li>
+            <li class="footer__links-item">
+              <a class="footer__links-link" href="#">Політика приватності</a>
             </li>
           </ul>
         </div>
-        <div class="footer-carriers">
-          <nav>
-            <h5 class="feedback-color">Перевізникам</h5>
-            <ul>
-              <li><a class="footer-links-color" href="#">Help Docs</a></li>
-              <li>
-                <a class="footer-links-color" href="#">Особистий кабінет</a>
-              </li>
-              <li><a class="footer-links-color" href="#">Оновлення</a></li>
-              <li>
-                <a class="footer-links-color" href="#contacts">Контакти</a>
-              </li>
-            </ul>
-          </nav>
+
+        <div class="footer__carriers">
+          <h5 class="footer__links-title">Перевізникам</h5>
+
+          <ul class="footer__links-list">
+            <li class="footer__links-item">
+              <a class="footer__links-link" href="#">Help Docs</a>
+            </li>
+            <li class="footer__links-item">
+              <a class="footer__links-link" href="#">Особистий кабінет</a>
+            </li>
+            <li class="footer__links-item">
+              <a class="footer__links-link" href="#">Оновлення</a>
+            </li>
+            <li class="footer__links-item">
+              <a class="footer__links-link" href="#contacts">Контакти</a>
+            </li>
+          </ul>
         </div>
-        <div class="footer-contact">
-          <h5 class="feedback-color">Зворотній зв’язок</h5>
-          <p class="footer-call-color">
+
+        <div class="footer__contact">
+          <h5 class="footer__links-title">Зворотній зв’язок</h5>
+
+          <p class="footer__contact-text">
             Маєш пропозиції щодо покращення<br />
-            сервісу - пиши нам!
+            сервісу — пиши нам!
           </p>
-          <form>
-            <input type="email" name="email" placeholder="Email Address" />
-            <button class="send-button" type="submit">Надіслати</button>
+
+          <form class="footer__form">
+            <input
+              class="footer__form-input"
+              type="email"
+              name="email"
+              placeholder="Email Address"
+            />
+            <button class="footer__form-button" type="submit">Надіслати</button>
           </form>
-          <address>
-            <ul>
-              <li>
-                <a class="social-links-grey" href="tel:+380735555555"
-                  ><img src="./img/phone.svg" alt="номер телефону" />+ 38
-                  (073)555 55 55</a
-                >
+
+          <address class="footer__address">
+            <ul class="footer__address-list">
+              <li class="footer__address-item">
+                <a class="footer__address-link" href="tel:+380735555555">
+                  <img src="./img/phone.svg" alt="Phone" /> +38 (073) 555 55 55
+                </a>
               </li>
-              <li>
+              <li class="footer__address-item">
                 <a
-                  class="social-links-grey"
+                  class="footer__address-link"
                   href="mailto:gmail@gmail.com"
                   target="_blank"
-                  ><img src="./img/mail.svg" alt="gmail" />gmail@gmail.com</a
                 >
+                  <img src="./img/mail.svg" alt="Email" /> gmail@gmail.com
+                </a>
               </li>
             </ul>
           </address>
         </div>
       </div>
-      <div class="footer-bottom">
-        <div class="container footer-bottom-inner">
-          <p class="rights">2024 © Sprinters. All rights reserved.</p>
-          <nav class="footer-socials">
-            <ul>
-              <li>
+
+      <div class="footer__bottom">
+        <div class="container footer__bottom-inner">
+          <p class="footer__rights">2024 © Sprinters. All rights reserved.</p>
+
+          <nav class="footer__socials">
+            <ul class="footer__socials-list">
+              <li class="footer__socials-item">
                 <a href="#" target="_blank"
                   ><img src="./img/facebook.svg" alt="Facebook"
                 /></a>
               </li>
-              <li>
+              <li class="footer__socials-item">
                 <a href="#" target="_blank"
                   ><img src="./img/instagram.svg" alt="Instagram"
                 /></a>
               </li>
-              <li>
+              <li class="footer__socials-item">
                 <a href="#" target="_blank"
                   ><img src="./img/dribbble.svg" alt="Dribbble"
                 /></a>
               </li>
-              <li>
+              <li class="footer__socials-item">
                 <a href="#" target="_blank"
                   ><img src="./img/linkedIn.svg" alt="LinkedIn"
                 /></a>
               </li>
-              <li>
+              <li class="footer__socials-item">
                 <a href="#" target="_blank"
                   ><img src="./img/twitter.svg" alt="Twitter"
                 /></a>
@@ -615,6 +814,7 @@
         </div>
       </div>
     </footer>
+
     <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
     <script>
       document.addEventListener('DOMContentLoaded', function () {
@@ -650,6 +850,34 @@
         btnNext.addEventListener('click', () => {
           fp.changeMonth(1);
         });
+      });
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+      const reviewsSwiper = new Swiper('.reviews__slider', {
+        slidesPerView: 2,
+        slidesPerGroup: 2,
+        spaceBetween: 32,
+        loop: false,
+        navigation: {
+          nextEl: '.reviews__arrow--next',
+          prevEl: '.reviews__arrow--prev',
+        },
+        pagination: {
+          el: '.reviews__pagination',
+          clickable: true,
+        },
+
+        breakpoints: {
+          0: {
+            slidesPerView: 1,
+            slidesPerGroup: 1,
+          },
+          768: {
+            slidesPerView: 2,
+            slidesPerGroup: 2,
+          },
+        },
       });
     </script>
   </body>
