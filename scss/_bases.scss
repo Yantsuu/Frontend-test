@@ -20,6 +20,14 @@ body {
   max-width: 1192px;
   margin: 0 auto;
   padding: 0;
+
+  @media screen and (max-width: $bp-descktop) {
+    padding-left: 15px;
+  }
+
+  @media screen and (max-width: $bp-laptop) {
+    padding-left: 15px;
+  }
 }
 
 h1,

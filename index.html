@@ -52,11 +52,37 @@
           </ul>
 
           <div class="header__actions">
-            <button class="header__btn header__btn--outline">
-              Створити профіль
-            </button>
+            <button class="header__btn header__btn--outline">Sing in</button>
             <span class="header__divider"></span>
-            <button class="header__btn header__btn--filled">Увійти</button>
+            <button class="header__btn header__btn--filled">Log in</button>
+          </div>
+          <button type="button" class="burger" id="burger-btn">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+          <div class="mobile-overlay"></div>
+
+          <div class="mobile-menu">
+            <img src="/img/logo.svg" alt="Логотип" />
+            <ul class="mobile-menu__list">
+              <li><a href="#top" class="mobile-menu__link">Головна</a></li>
+              <li>
+                <a href="#drivers" class="mobile-menu__link">Перевізникам</a>
+              </li>
+              <li><a href="#about" class="mobile-menu__link">Про нас</a></li>
+              <li>
+                <a href="#profile" class="mobile-menu__link"
+                  >Профіль перевізника</a
+                >
+              </li>
+            </ul>
+
+            <div class="mobile-menu__actions">
+              <button class="header__btn header__btn--outline">Sing in</button>
+              <span class="header__divider"></span>
+              <button class="header__btn header__btn--filled">Log in</button>
+            </div>
           </div>
         </nav>
       </div>
@@ -75,6 +101,48 @@
               alt="Компанія"
               class="profile__logo"
             />
+
+            <div class="profile__stats profile__stats--mobile">
+              <div class="profile__stat">
+                <img src="./img/fire.svg" alt="" />
+                <div class="profile__stat-text">
+                  <p class="profile__stat-label">На ринку від:</p>
+                  <p class="profile__stat-value">Травень 31, 2011</p>
+                </div>
+              </div>
+
+              <div class="profile__stat">
+                <img src="./img/people.svg" alt="" />
+                <div class="profile__stat-text">
+                  <p class="profile__stat-label">Перевезених пасажирів</p>
+                  <p class="profile__stat-value">4000+</p>
+                </div>
+              </div>
+
+              <div class="profile__stat">
+                <img src="./img/bus.svg" alt="" />
+                <div class="profile__stat-text">
+                  <p class="profile__stat-label">Автопарк</p>
+                  <p class="profile__stat-value">8 бусів</p>
+                </div>
+              </div>
+
+              <div class="profile__stat">
+                <img src="./img/global.svg" alt="" />
+                <div class="profile__stat-text">
+                  <p class="profile__stat-label">Обслуговуємо</p>
+                  <p class="profile__stat-value">8 країн</p>
+                </div>
+              </div>
+
+              <div class="profile__stat">
+                <img src="./img/city.svg" alt="" />
+                <div class="profile__stat-text">
+                  <p class="profile__stat-label">Місто</p>
+                  <p class="profile__stat-value">Львів</p>
+                </div>
+              </div>
+            </div>
 
             <div class="profile__main">
               <div class="profile__title-row">
@@ -96,7 +164,7 @@
                 </a>
               </div>
 
-              <div class="profile__stats">
+              <div class="profile__stats profile__stats--desktop">
                 <div class="profile__stat">
                   <img src="./img/fire.svg" alt="" />
                   <div class="profile__stat-text">
@@ -278,7 +346,7 @@
                   </div>
                 </li>
 
-                <!-- кнопка "усі країни" -->
+                кнопка "усі країни"
                 <li class="countries__item countries__item--all">
                   <a href="#" class="countries__all-link">
                     Усі країни
@@ -814,7 +882,7 @@
         </div>
       </div>
     </footer>
-
+    <script src="mobile-menu.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
     <script>
       document.addEventListener('DOMContentLoaded', function () {
