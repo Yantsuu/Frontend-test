@@ -2,6 +2,10 @@
   background-color: #f8f8fd;
   padding: 40px 0 73px;
   margin-bottom: 72px;
+
+  @media screen and (max-width: $bp-descktop) {
+    margin-bottom: 32px;
+  }
 }
 
 .profile {
@@ -88,7 +92,6 @@
       flex-wrap: wrap;
       gap: 24px;
       margin-top: 16px;
-
       order: 3;
       width: 100%;
     }

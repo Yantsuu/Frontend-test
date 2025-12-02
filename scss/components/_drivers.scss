@@ -14,6 +14,10 @@
     font-size: 32px;
     font-weight: 800;
     margin: 0;
+
+    @media (max-width: $bp-descktop) {
+      font-weight: 600;
+    }
   }
 
   &__all-link {
@@ -22,9 +26,13 @@
     color: var(--color-brand);
     font-weight: 600;
     text-decoration: none;
+    cursor: pointer;
+    padding: 0;
+    background: none;
+    border: none;
 
-    &:hover {
-      opacity: 0.7;
+    @media (max-width: 1280px) {
+      display: block;
     }
   }
 
@@ -32,12 +40,41 @@
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
     gap: 16px;
+    list-style: none;
     padding: 0;
     margin: 0;
-    list-style: none;
-  }
 
-  &__item {
-    list-style: none;
+    @media (max-width: $bp-descktop) {
+      li:nth-child(5) {
+        display: none;
+      }
+    }
+
+    @media (max-width: 957px) {
+      li:nth-child(4) {
+        display: none;
+      }
+    }
+
+    @media (max-width: 711px) {
+      li:nth-child(4) {
+        display: list-item;
+      }
+    }
+
+    @media (max-width: $bp-mobile) {
+      li:nth-child(3) {
+        display: none;
+      }
+      li:nth-child(4) {
+        display: none;
+      }
+    }
+
+    &.drivers__list--expanded {
+      li {
+        display: list-item !important;
+      }
+    }
   }
 }

@@ -6,11 +6,16 @@
   pointer-events: none;
   transition: 0.3s ease;
   z-index: 1990;
+
+  &.is-open {
+    opacity: 1;
+    pointer-events: auto;
+  }
 }
 
-.mobile-overlay.is-open {
-  opacity: 1;
-  pointer-events: all;
+.no-scroll {
+  overflow: hidden;
+  height: 100vh;
 }
 
 .mobile-menu {
@@ -60,12 +65,5 @@
   display: flex;
   justify-content: center;
   gap: 12px;
-
   padding-bottom: 32px;
-}
-
-.header__divider {
-  height: 47px;
-  width: 1px;
-  background: #cccccc;
 }

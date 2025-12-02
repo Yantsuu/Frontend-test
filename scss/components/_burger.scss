@@ -20,15 +20,15 @@
     transition: 0.3s;
   }
 
-  &.active span:nth-child(1) {
+  &.is-open span:nth-child(1) {
     transform: translateY(10px) rotate(45deg);
   }
 
-  &.active span:nth-child(2) {
+  &.is-open span:nth-child(2) {
     opacity: 0;
   }
 
-  &.active span:nth-child(3) {
+  &.is-open span:nth-child(3) {
     transform: translateY(-10px) rotate(-45deg);
   }
 

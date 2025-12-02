@@ -1,12 +1,15 @@
+const burgerBtn = document.getElementById('burger-btn');
 const mobileMenu = document.querySelector('.mobile-menu');
-const burgerBtn = document.querySelector('#burger-btn');
 const mobileOverlay = document.querySelector('.mobile-overlay');
+const body = document.body;
 
 const toggleMenu = () => {
+  burgerBtn.classList.toggle('is-open');
   mobileMenu.classList.toggle('is-open');
   mobileOverlay.classList.toggle('is-open');
-  burgerBtn.classList.toggle('active');
+  body.classList.toggle('no-scroll');
 };
 
 burgerBtn.addEventListener('click', toggleMenu);
+
 mobileOverlay.addEventListener('click', toggleMenu);

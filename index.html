@@ -345,8 +345,6 @@
                     <span class="countries__name">Іспанія</span>
                   </div>
                 </li>
-
-                кнопка "усі країни"
                 <li class="countries__item countries__item--all">
                   <a href="#" class="countries__all-link">
                     Усі країни
@@ -397,7 +395,9 @@
         <div class="container">
           <div class="drivers__header">
             <h2 class="drivers__title">Наші водії</h2>
-            <a href="#" class="drivers__all-link">Усі водії (7)</a>
+            <button class="drivers__all-link" id="drivers-toggle">
+              Усі водії
+            </button>
           </div>
 
           <ul class="drivers__list">
@@ -882,6 +882,7 @@
         </div>
       </div>
     </footer>
+    <script src="drivers.js"></script>
     <script src="mobile-menu.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
     <script>

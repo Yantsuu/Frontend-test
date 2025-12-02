@@ -109,16 +109,4 @@
     gap: 12px;
     align-items: center;
   }
-
-  .swiper-pagination-bullet {
-    width: 10px;
-    height: 10px;
-    background: #d6ddeb;
-    opacity: 1;
-    border-radius: 50%;
-  }
-
-  .swiper-pagination-bullet-active {
-    background: var(--color-brand);
-  }
 }

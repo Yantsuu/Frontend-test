@@ -23,10 +23,12 @@ body {
 
   @media screen and (max-width: $bp-descktop) {
     padding-left: 15px;
+    padding-right: 15px;
   }
 
   @media screen and (max-width: $bp-laptop) {
-    padding-left: 15px;
+    padding-left: 10px;
+    padding-right: 10px;
   }
 }
 
