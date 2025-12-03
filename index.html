@@ -885,69 +885,8 @@
     <script src="drivers.js"></script>
     <script src="mobile-menu.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
-    <script>
-      document.addEventListener('DOMContentLoaded', function () {
-        const calendarTitle = document.getElementById('calendar-title');
-        const btnPrev = document.getElementById('calendar-prev');
-        const btnNext = document.getElementById('calendar-next');
-
-        const fp = flatpickr('#trip-calendar', {
-          inline: true,
-          locale: 'en',
-          defaultDate: 'today',
-          minDate: 'today',
-
-          onReady: function (selectedDates, dateStr, instance) {
-            updateTitle(instance);
-          },
-          onMonthChange: function (selectedDates, dateStr, instance) {
-            updateTitle(instance);
-          },
-        });
-
-        function updateTitle(instance) {
-          const m = instance.currentMonth;
-          const y = instance.currentYear;
-          const monthName = instance.l10n.months.longhand[m];
-          calendarTitle.textContent = `${monthName} ${y}`;
-        }
-
-        btnPrev.addEventListener('click', () => {
-          fp.changeMonth(-1);
-        });
-
-        btnNext.addEventListener('click', () => {
-          fp.changeMonth(1);
-        });
-      });
-    </script>
+    <script src="./flatpickr.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script>
-      const reviewsSwiper = new Swiper('.reviews__slider', {
-        slidesPerView: 2,
-        slidesPerGroup: 2,
-        spaceBetween: 32,
-        loop: false,
-        navigation: {
-          nextEl: '.reviews__arrow--next',
-          prevEl: '.reviews__arrow--prev',
-        },
-        pagination: {
-          el: '.reviews__pagination',
-          clickable: true,
-        },
-
-        breakpoints: {
-          0: {
-            slidesPerView: 1,
-            slidesPerGroup: 1,
-          },
-          768: {
-            slidesPerView: 2,
-            slidesPerGroup: 2,
-          },
-        },
-      });
-    </script>
+    <script src="./slider.js"></script>
   </body>
 </html>

@@ -26,4 +26,22 @@
       opacity: 1;
     }
   }
+
+  @media (max-width: 580px) {
+    &__bottom-inner {
+      flex-direction: column;
+      align-items: center;
+      gap: 12px;
+      text-align: center;
+    }
+
+    &__rights {
+      text-align: center;
+    }
+
+    &__socials-list {
+      padding: 0;
+      justify-content: center;
+    }
+  }
 }
