@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (hidden.length > 0) {
       link.textContent = `Усі водії (${hidden.length})`;
     } else {
-      link.textContent = 'Сховати';
+      link.textContent = '';
     }
   }
 
